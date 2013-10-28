@@ -1,0 +1,239 @@
+%%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a general template file for the LaTeX package SVJour3
+% for Springer journals.          Springer Heidelberg 2010/09/16
+%
+% Copy it to a new file with a new name and use it as the basis
+% for your article. Delete % signs as needed.
+%
+% This template includes a few options for different layouts and
+% content for various journals. Please consult a previous issue of
+% your journal as needed.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% First comes an example EPS file -- just ignore it and
+% proceed on the \documentclass line
+% your LaTeX will extract the file if required
+\begin{filecontents*}{example.eps}
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 19 19 221 221
+%%CreationDate: Mon Sep 29 1997
+%%Creator: programmed by hand (JK)
+%%EndComments
+gsave
+newpath
+  20 20 moveto
+  20 220 lineto
+  220 220 lineto
+  220 20 lineto
+closepath
+2 setlinewidth
+gsave
+  .4 setgray fill
+grestore
+stroke
+grestore
+\end{filecontents*}
+%
+\RequirePackage{fix-cm}
+%
+%\documentclass{svjour3}                     % onecolumn (standard format)
+%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
+\documentclass[smallextended]{svjour3}       % onecolumn (second format)
+%\documentclass[twocolumn]{svjour3}          % twocolumn
+%
+\smartqed  % flush right qed marks, e.g. at end of proof
+%
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{natbib}
+
+%
+% \usepackage{mathptmx}      % use Times fonts if available on your TeX system
+%
+% insert here the call for the packages your document requires
+%\usepackage{latexsym}
+% etc.
+%
+% please place your own definitions here and don't use \def but
+\newcommand{\jri}[1]{{\small \textcolor{blue}{\bf #1}}}
+\newcommand{\pb}[1]{{\small \textcolor{Tan}{\bf #1}}}
+
+%
+% Insert the name of "your journal" with
+% \journalname{myjournal}
+%
+\begin{document}
+
+\title{Diversity and evolution of centromere repeats in the maize genome%\thanks{Grants or other notes
+%about the article that should go on the front page should be
+%placed here. General acknowledgments should be placed at the end of the article.}
+}
+%\subtitle{Do you have a subtitle?\\ If so, write it here}
+
+%\titlerunning{Short form of title}        % if too long for running head
+
+\author{Paul Bilinski \and Kevin Distor \and Jose Gutierez-Lopez \and Gabriela Mendoza Mendoza \and Jinghua Shi \and Kelly Dawe \and Jeffrey Ross-Ibarra}
+
+%\authorrunning{Short form of author list} % if too long for running head
+
+\institute{F. Author \at
+              first address \\
+              Tel.: +123-45-678910\\
+              Fax: +123-45-678910\\
+              \email{fauthor@example.com}           %  \\
+%             \emph{Present address:} of F. Author  %  if needed
+           \and
+           S. Author \at
+              second address
+\jri{Please add addresses etc. Gaby, Jose, and Kevin all need to be listed as plant sciences as they were here when they did the work. we can ask them if they would like their other addresses ALSO listed (fine by me) but they need to have plant sciences too.  Put Junghua as Dept. of Plant Bio UGA.  Then make a separate one for Dept. Genetics UGA, and put Kelly as both.}
+}
+
+
+
+\date{Received: date / Accepted: date}
+% The correct dates will be entered by the editor
+
+
+\maketitle
+
+\begin{abstract}
+
+Centromere repeats are found in most eukaryotes and play a critical role in kinetochore formation.  Though they exhibit considerable diversity both within and among species, little is understood about the mechanisms that drive centromere repeat evolution.  Here, we use maize as a model to investigate how a complex history involving polyploidy, fractionation, and recent domestication has impacted the diversity of the maize CentC repeat.  We first validate the existence of long tandem arrays of repeats in maize and other taxa in Zea.  We show that genetic similarity among CentC copies is highest within these arrays, suggesting that tandem duplications are the primary mechanism for the generation of new copies.  In spite of this, we see little evidence that CentC variants form distinct genetic groups, instead finding that homoplasious mutations have likely homogenized CentC diversity.  We identify Cent4, a repeat initially thought to be specific to the chromosome 4 centromere, as an LTR retrotransposon that has increased drastically in frequency through domestication.  Although the two ancestral subgenomes of maize have contributed nearly equal numbers of centromeres, our analysis shows that a vast majority of all CentC repeats derive from only one of the parental genomes.  Finally, by comparing maize with its wild progenitor teosinte, we find that the abundance of CentC has decreased through domestication. 
+
+\jri{I deleted the phrase talking about rates because we don’t really do/say anything about rate do we?}
+
+\keywords{First keyword \and Second keyword \and More}
+% \PACS{PACS code1 \and PACS code2 \and more}
+% \subclass{MSC code1 \and MSC code2 \and more}
+\end{abstract}
+
+\section*{Introduction}
+\label{intro}
+In spite of the rapid growth of sequenced plant genomes, plant centromeres remain poorly understood and relatively cryptic, due largely to their highly repetitive content.  Centromere repeats are highly diverse across taxa and their turnover appears to be very rapid \citep{Melters2012}. However, little is known about the genetic mechanisms that produce centromere repeat diversity.  
+Domesticated maize (\emph{Zea mays} ssp. \emph{mays}) has a high quality genome assembly \citep{Schnable2009} including complete sequence of two centromeres (\jri{cite wolfgruber here?? or is schnable enough?}), and the breadth of research into maize centromeres makes it one of the best systems in which to investigate the processes governing centromere repeat evolution.
+\jri{The line about old nonfunctional repeats is a good point, but we don't look for these or really say much about function.}
+
+Maize centromeres are comprised primarily of the 156bp satellite repeat CentC and a family of retrotransposons (CRM), both of which interact with  kinetochore proteins such as CENH3 (\jri{please do citations as shown above. just put the bibtex version of the citation from bookends in the refcentc.bib file.} Wolfgruber et al 2009, Zhong et al 2002), and both repeats show considerable variation in local abundance across taxa (Albert et al 2010).  But while there is considerable effort in investigating the molecular function of maize centromere repeats (Presting Chapter and references therein? \jri{here. citing “and references therein” is sort of weak scholarship. yes, i have been guilty of it myself.}), we know comparatively little about the evolution of the sequences themselves. CRM elements are better understood, including the age and insertion preferences of different CRM families (Wolfgruber et al 2009) \jri{shouldn't we cite Anupma's PNAS paper here too?}.  In contrast,  studies \jri{what studies? reference?} have only examined the flanking sequences to CentC islands despite their known association with functional centromeres.  To date, there is no in-depth characterization of the genetic diversity of centromere repeats in the maize genome.  In this paper, we describe the patterns of diversity of centromere repeats across the maize genome.  We investigate the genetic diversity of these repeats, including whether the differential ancestry of maize centromeres (Wang and Bennetzen 2012) has led to chromosome-specific repeats as found in other species (Heslop-Harrison 1999, Hirsch et al 2009) and how genetic relatedness among individual repeats varies spatially along chromosomes and across the genome.  We then compare centromere abundance across a number of maize lines, including to its wild relatives the teosintes.  We find that CentC copies do not form genetic groups consistent with ancient whole genome duplications or chromosome specificity.  Instead, we show higher genetic similarity within clusters, potely indicating the predominance of tandem duplications in the formation of new CentC copies.  Lastly, we use low coverage sequencing and cytological analyses datshow that domesticated maize has less CentC and reli its wild relative  teosinte line
+\section*{Methods}
+\label{methods}
+
+\subsection*{CentC Repeat Identification and Diversity}We downloaded 218 previously annotated CentC sequences (Annaniev et al 1998, Nagaki et al 2003) from Genbank.  We then searched the maize genome (5b60, \url{www.maizesequence.org}) with megaBLAST (McGinnis and Madden 2004) using the 218 annotated CentCs as a reference.  We kept hits with a length of over 140bp and a minimum bit score of 100.  After meeting the bit score threshold, the longest hit was retained.  We defined CentC’s as being in tandem if the CentC’s start location was within 1000bp of the start location of another CentC.	
+All 12,162 CentC sequences were aligned using 7 iterations of Muscle (Edgar 2004) with default parameters.  A Jukes-Cantor distance matrix of all sequences was calculated with PHYLIP (Felsenstein 2005, \url{http://evolution.genetics.washington.edu/phylip.html}), and an unrooted neighbor joining tree was built based on the distance matrix.  	
+We used principle coordinate analysis (PCoA) to cluster CENTC variants based on their genetic distances. Eigenvalues from the PCoA were used to determine the number of statistically significant clusters using the Tracy-Widom distribution (c.f. Patterson et al 2006).  	
+We employed the software SpaGeDi (\url{http://ebe.ulb.ac.be/ebe/Software.html}, Hardy and Vekemans 2002) to estimate the spatial autocorrelation of sequence similarity of CENTC repeats in the completely sequenced centromeres 2 and 5.  We calculated Moran’s I statistic using Jukes-Cantor genetic distance and measures of physical distance between CENTC repeats in base pairs.  Confidence intervals for the values of I were estimated by 20,000 random permutations of the physical distances.  	
+Statistical analyses were performed in R with the packages ape (Paradis, Claude, and Strimmer 2004) and RMTstat (Perry et al 2009).  We compared clusters to chromosome of origin and syntenic maps of maize ancient tetraploidy (Schnable et al 2011) to determine if the genetic history of maize left a footprint on CentC similarity.\subsection*{Read Mapping and Genome Size Correction}	
+We mapped Illumina reads from a broad panel of Zea species \citep{Chia2012,Tenaillon2011}  to a reference consisting of the full complement of 12,162 CentC variants identified in the B73 genome.  We also used previously published whole genome chromatin immunoprecipitation (ChIP) (Wolfgruber et al 2009, Wang et al 2013) with CenH3.  Reads were mapped using  Mosaik v1.0 (\url{https://code.google.com/p/mosaik-aligner/}). We first optimized mapping parameters by relaxing mapping stringency and evaluating the number of successfully mapped reads with each combination.  Consistent with parameters from previous studies mapping reads to repetitive elements \citep{Tenaillon2011}, we required homology to remain at a minimum of 80\%.  For other non-default parameters, we permuted over many values of hash size, alignment candidate threshold,  percent of read aligning, and maximum number of hash positions per seed to find a combination that produced believable alignments.  We selected an optimum combination of parameters just below the parameters where we observed a large increase in the total number of reads aligning (Supplementary Figure X \jri{please start filling these in}).   The parameter boundary at which percentage of reads mapping increased disproportionately was identified, and parameters just below this threshold were selected.  Our final set of parameters for tandem repeats used an initial hash size of 8, an alignment candidate threshold of 15 bases, 20\% percent of mismatching bases, a minimum of 30\% overlap to the reference, and stored the top 100 hits for alignment.  After reads were mapped, we calculated the percentage of total reads hitting the given reference and multiplied this value by the relative genome size of each accession as reported in \citet{Chia2012} and \citet{Tenaillon2011}. \jri{note difference here in effect of citep and citet commands} The total number of reads mapping did not change drastically when using one random copy of CentC versus the full AGPv2 reference, suggesting that our parameters are sufficiently broad to capture genome-wide CentC.  Because library preparation has an effect on estimates of repeat abundance (see results), we only used individuals from maize HapMap v2 \citep{Chia2012} with libraries prepared using identical methods.	
+We used a different set of mapping parameters for long repeats such as transposable elements.  Previous studies (Schnable et al 2009) estimated that approximately 85\% of maize genome derives from transposable elements.  Using the short read libraries from Tenaillon et al (2011), we selected parameters so that approximately 85\% of the library mapped to the maize transposable element database (\url{maizetedb.org}) with a minimum homology of 80\%.  The final parameters for TEs were a hash size of 10, alignment candidate threshold of 11, 80\% homology excluding non-aligned portions of the read, and a 30\% minimum overlap. \subsection*{CentC simulations}
+
+\jri{needs some basic setup. we start with alignment (?) and then do what to it? what was the code written in? is the code available? if so cite github url}. Our simulation assumed that CentC had been evolving since the divergence of maize and \emph{Tripsacum} (10 million years, Ross-Ibarra et al 2009)\jri{that's not the date i cite in my paper! should be 1 million.}, a closely related genus whose centromere repeat shares a large degree of homology \citep{Melters2012}.  We assumed a constant copy number, a mutation rate of $3 x 10^{-8}$, and one generation per year.  \subsection*{Sequencing}	
+Library preparation and sequencing was performed according to the methods cited in Melters et al 2012.  Using those protocols, we sequenced one individual from \emph{mays}, \emph{mexicana}, \emph{parviglumis}, and \emph{Z. luxurians} with Pacific Biosciences (\jri{cite}) technology. Approximately 200Mbp of reads were produced from each cell, and reads with length greater than 600bp were retained for analysis of tandem CentC content using BLAST (Supplementary Table \ref{supp.pacbio} \jri{check out how tables are done and referenced with this example}).  CentC copies were considered in tandem if the read had 4 CentC copies within 300bp of each other. \subsection*{FISH}Flourescent in situ hybridization (FISH) was used to compare abundance of CENTC repeats in chromosomes of a maize x parviglumis F1 hybrid and a maize x Z. luxurians F1 hybrid. FISH protocols closely followed those of X and Y.\jri{Need Kelly to fill in}	
+
+\section*{Results}
+\label{results}
+%i imagine results go 1) repeats in the genome. 2) subgenome stuff 3) realtedness (PcoA and spagedi and mutations 4) abundance.
+
+\subsection*{Centromere repeats in the maize genome}
+
+We found a total of 12,162 CentC variants in the maize reference genome and the unassembled BACs.  Of these 12,162 copies, 9,896 were unique over their full length. No CentC occurred more than 10 times in the genome, and the vast majority ($>$X\% \jri{if it’s easy, this number would be nice.}) of non-unique CentC variants occurred only twice.  Of the 2,266 non-unique CentC sequences, only 3 were tandem duplicates.  Genome-wide CentC locations also show that nearly all of the 10,639 CentC copies are found in one of the 248 clusters identified on chromosomes 1-10; only 14 occurred as solo copies.  Cluster size varied from single CENTC copies to 84KB, with a mean of ~7kb (approximately 45 CentC copies). Chromosomes varied greatly in copies of CentC.   Chromosome 7, with 3,200 copies, had the most CentC, while chromosome 6 had the fewest with 32 copies.  The presence of 1,523 copies of CentC on the unassembled BACs and so few copies on chromosome 6 suggest that Centromeric regions still require further assembly.  
+
+We used long-read Pacific Biosciences sequencing to verify that most CentC is in tandem arrays. We sequenced whole genome ($\approx 0.3$X \jri{I made up 0.3. can you estimate what this is? Just total Mb of data / genome size.}) libraries from 4 Zea species.  In spite of the low coverage, we recovered reads containing CentC sequence from all four taxa (Supplementary Table \jri{add}).  In one 6.7kb read from the maize reference line B73, for example, we identified approximately 40 independent CentC copies in tandem, and similar arrays were seen in all four Zea species analyzed.  These results show that overall structure of the repeats has been maintained for the approximately 140,000 years since the \emph{luxurians}-\emph{mays} divergence (Hanson et al. 1996; Ross-Ibarra et al. 2009) and that a majority of CentC is found in tandem arrays (\jri{add table ref}). \jri{this last sentence is a nice addition}
+
+\jri{seems like in this paragraph we should cite the circos figure, no?} We then identified how many large clusters of CentC were retained from each of the two parental genomes that comprise the extant maize genome.  Previous work identified the parental genome for individual chromosomal segments (Schnable et al 2011) and centromeres (Wang and Bennetzen 2012).  Because large clusters are less likely to be misassembled, we focused our analyses on the 52 clusters $>$10KB in length (Supplementary Fig Histogram \jri{add}).  While Schnable et al. (2010) do not assign subgenome status to repetitive regions, we assign clusters to a subgenome if they are flanked by two regions identified as originating from the same  subgenome.  Thirty-eight of these clusters could be assigned to subgenome 1 (out of 43 assignable); of the 17 clusters $>$20KB, 16 were unambiguously assigned to subgenome 1.  Even correcting for the genome-wide overrepresentation of subgenome 1 ( 62.5\% of assigned base pairs), these results suggest a strong inequality in the origin of large CentC clusters ( binomial test, $p<0.005$ for both 10kb and 20kb clusters). \jri{isn't this a fisher's exact?}
+
+\begin{figure}
+% For two-column wide figures use
+% Use the relevant command to insert your figure file.
+%  \includegraphics[width=0.75\textwidth]{circos.png}
+  \includegraphics{circos.png}
+\caption{CentC repeat location in relation to the maize subgenomes.  High confidence regions are colored with darker colors while low confidence regions are colored with lighter colors.  Breakpoints between the subgenomes remain uncolored to indicate uncertainty.}
+\label{circos}    
+\end{figure}
+
+In addition to CentC, previous studies have described a second high copy number centromere repeat specific to maize chromosome 4 (Page et al 2001).   BLAST analyses of Cent4 sequences, however, revealed that all 15 had high homology to the poorly characterized LTR retrotransposon RLX\_sela, which was previously shown to be associated with heterochromatic  knobs (Tenaillon et al 2011, Chia et al 2012), suggesting that Cent4 is actually a pericentromeric retrotransposon. 
+
+Whole-genome cenH3 chromatin immuno-precipitation data from Wolfgruber (et al 2009) shows no significant over-representation of cent4 compared to five known non-centromeric TE’s, suggesting the cent4 repeat is not involved in kinetichore formation on chromosome 4.  \jri{the jin result is very cool and i wasn't aware of. i moved to discussion though. }
+	
+\subsection*{Relatedeness of CentC in the maize genome.}
+
+CentC copies in the maize genome exhibit tremendous diversity: the overall pairwise identity in our alignment was only 65\%, and ~98\% of sites in the alignment had at least 2 variants .  Such diversity led us to ask whether genetic groups of CentC variants could be distinguished. We performed principle coordinate analyses from a genetic distance matrix estimated from our alignment and assigned individual repeats to  genetic clusters following the approach of Patterson et al (2006).  We found 58 significant clusters, but observed no pattern of groupings that revealed chromosome specificity of CentC’s or the impact of historical tetraploidy (Supplemental Table X \jri{add}).
+
+The tandem nature of CentC suggests it increases in copy number through local duplications that produce initially identical copies.  This predicts that local clusters of CentC should be more closely related than CentC from different clusters.  Analysis of genetic and physical distance among CentC repeats on chromosomes 2 and 5 indeed shows this pattern (Figure \ref{heatmap}), revealing significant spatial autocorrelation of CentC variants over distances up to 10 KB (Supplementary Figure SPAGEDI \jri{add}). \jri{need to standardize usage of kb. also i thought autocorrelation was significant up to larger distances?}
+
+\begin{figure}
+% For two-column wide figures use
+% Use the relevant command to insert your figure file.
+\includegraphics[width=1\textwidth]{heatmap.png}
+\caption{CentC physical location and genetic relatedness for (a) chromosome 2 and (b) chromosome 5.  On the physical map, red lines show locations of numbered CentC clusters and blue blocks show the location of the active kinetichores.  Scale bar is in Mb.  Below each physical map is shown a heatmap of genetic relatedness of each CentC to (top) other copies within its island of tandem repeats delineated by dotted lines and (bottom) all other copies on the chromosome.  Darker colors indicate higher relatedness.  The total number of CentC in each cluster is shown below the map.  
+}
+\label{heatmap}    
+\end{figure}
+
+The decreased genetic distance among CentCs in local clusters on chromosome 2 and 5 suggest that many of the genetic groupings discovered in our genome-wide analysis should correspond to local clusters of repeats. We see no evidence of this, however, as repeats within individual clusters are frequently found in different genetic groups as defined by PCoA (Supplemental Table X \jri{add}).  A comparison of all pairs of CentC reveals a likely explanation: of the $\approx 74$ million possible pairs,  approximately 6 million \jri{this said 10, isn't it 6 observed 10 simulated??} share $\geq 2$ mutations different from the genome-wide consensus, likely grouping in genetic clusters despite their physical distance.  \jri{have you verified any of these? that is, take some centcs in a single genetic group, find one that isn’t from the same physical cluster, and show that it’s in that genetic group because it shares some non-concensus mutations that are different from those repeats in its own physical cluster?} A simple forward simulation (see \ref{methods}) suggests this pattern could be due entirely to homoplasy rather than long-distance movement of CentC repeats.  By stochastically applying mutations to an initially homogeneous group of repeat sequences, we find that plausible parameter values produce $\approx 10$ million pairs of repeats sharing $\geq 2$ mutations.      
+
+\subsection*{Variation in CentC abundance in Zea}
+
+Shotgun sequence data from the maize HapMap v2 \ref{Chia2012}, reveals a significantly greater abundance of CentC in teosinte than in domesticated maize ((p$<0.01$; Fig. boxplot). Teosintes have more CentC than inbred maize.  Further support for differences between maize and its wild relatives comes from shotgun sequence data from \emph{Z. luxurians} (Tenaillon et al 2011).  Analysis of these data find nearly twice as much CentC in \emph{Z. luxurians} as the maize inbred B73.  To corroborate these results, we performed fluorescent in-situ hybridization of F1 crosses between inbred maize and teosinte to determine if cytological observations agreed with our sequencing findings.  Cytology needed to be performed on an F1 cross so that we could compare relative probe fluorescence of the chromosomes within a single individual.  FISH data supports our observation that the teosintes \emph{parviglumis} and \emph{Z. luxurians} have more CentC than inbred maize (Figure 3) \jri{add in this figure, and better quality images of first two}.    
+
+\section*{Discussion}
+\label{discussion}
+
+%% STUFF JEFF MAY ADD TO DISCUSSION
+%Phylogenetic analysis of centromere repeats from a large number of eukaryotes found that repeat abundance evolves more rapidly than expected under a simple model of brownian motion \ref{Melters2012}. 
+
+%While genome size (Poggio et al 1998), transposable elements (TEs) (Chia et al 2012), and heterochromatic knob content (Poggio et al 1998) are known to have changed greatly through domestication, little information exists as to how domestication has impacted centromeric repeats.  Previous cytogenetic work has identified considerable variation in centromere repeat content  between domesticated maize and its wild relatives Z. mays ssp. parviglumis,), Z. mays ssp. mexicana,, and Z. luxurians (hereafter parviglumis, mexicana, and luxurians) (Albert et al 2010). 
+
+% It is likely that our empirical value is lower than our simulated value because we assume that all CentC copies have existed since the divergence event, while it is much more likely that age is high variable across copies.  Provided with such a large percentage of copies sharing mutations through homoplasy, we posit that it is possible for homoplasy, in the form of repeated mutations in different CentC copies, to drive our PCoA groupings.
+
+Our study traces the changes in centromere repeat genetic relatedness across maize chromosomes to show how ancient tetraploidy and subsequent evolution has impacted centromeres.  Most interestingly, we show that most large arrays of CentC in the maize reference genome derive from maize1 subgenome, which is known to have lower gene loss and higher average expression of its genes than maize subgenome 2.  Regulatory microRNA’s are known to correspond to centromeric repeats (Reinhart and Bartel 2002).  Therefore, it may be worthwhile to further investigate the potential correlation between centromere retention and gene expression as the phenomenon of higher expression of genes from one ancestor may be very common across plants (A. thaliana Cheng et al 2012 and Gossypium Kapp and Wendel unpublished).  \pb{Two comments about this: first, its a terrible sentence so help make this better, because i think the point is really nice.  second, the best citations i found for cotton was an unpublished ref that is still not published from what i can gather.  advice? e.g. \url{http://www.plosone.org/article/info\%3Adoi\%2F10.1371\%2Fjournal.pone.0036442} also check out papers that cite Schabs: \url{http://scholar.google.com/scholar?cites=5313714612108479532&as_sdt=2005&sciodt=0,5&hl=en} } There are several possible explanations for the differential contribution of subgenome 1 to the diversity of CentC in the extant maize  genome. We put forth several hypotheses that may explain the strong bias for CentC to be located within a block from subgenome 1. Subgenome 2 may have had severely reduced quantities of CentC and therefore never contributed equally.  The CentC from subgenome 2 may have decayed rapidly and thus less of it remains.  Lastly, the CentC from subgenome 1 may have expanded in copy number since the allopolyploidy event.  Though we are unable to conclusively identify the reason, the lack of a large number of identical tandem duplicates  and lack of close proximity highest genetic relatedness pairs suggests that any large scale expansion of CentC has not been recent.  Also, CentC’s in subgenome 2 cluster do not appear to have accumulated excess mutation, suggesting that they are not decaying more rapidly than their subgenome 1 counterparts.  We therefore believe that it is most likely that the subgenomes had an unequal contribution of CentC at the formation of the allopolyploid, though more research about the ancient parents is required.  
+
+We also explored how genetic relatedness between CentC’s correlated with location along the physical map.  According to our PCoA analyses, CentC copies across the genome do not form distinct genetic groups correlating with past origin.  The lack of subgenome or chromosome grouping in modern CentC may be a result of homogenization of the repeats since the polyploidy event or a lack of differentiation between the repeats of the ancestors.  \jri{the fact that repeats in Trip are the same suggests no differentiation in ancestors right? if they had homogenized (read: changed) since ancestors, why would trip == maize?} \pb{unless trip and maize both went with the CentC most like one of the 2 ancestors} Given the lack of a genome wide pattern, we also wanted to investigate genetic relatedness on individual chromosomes.  We hypothesized that most copies of CentC arose from local duplication rather than transposition, and therefore the genetic distance between CentC’s would be lowest across CentC’s within a large tandem array.  \pb{This part is ugly, and needs help} From the reference genome, we chose to investigate chromosomes 2 and 5, since they have been sequenced from end to end, allowing for inferences about the relationship between diversity and physical proximity ( Wolfgruber et al 2009).  Furthermore, the role of the repeat arrays on chromosomes 2 and 5 appear very different, as the largest array on chromosome 2 interacts with the kinetichore, while no array on chromosome 5 does \jri{cite}.  We find that repeats on chromosomes 2 and 5 are most highly genetically related to neighboring copies (Figure Heatmap).  This relationship was recapitulated in analyses using SpaGeDi, where CentC’s within approximately 10Kb of one another were more genetically similar (Supplemental Data).  Though we did not investigate the relationship between CentC location and genetic similarity on the other chromosomes due to incomplete sequencing of centromeres, we observe that many CentC’s within an array fall into the same  significant grouping in our Tracy-Widom clustering analysis, suggesting that high local similarity of CentC’s is a genome-wide phenomenon.  This local relatedness suggests that most CentC is evolving through tandem duplication and not a long distance mechanism such as transposition that had been previously suggested ( Shi et al 2010).  Concerning chromosomes 2 and 5, the higher local relatedness of all CentC clusters regardless of presence within the kinetochore suggests that CentC interaction with kinetochore proteins does not have a detectable change on their rates of evolution.
+
+When investigating why a pair of chromosomes on two different chromosomes are each other closest genetic relative, we revealed that homoplasy in mutations is common across CentC variants.  We suggest that copies of CentC are sufficiently old within the genome that  homoplasious mutations cause physically distant CentC’s to be highly genetically related.  Importantly, we also do not see PCoA group capturing full clusters across chromosomes in a way that would be consistent with  retrotransposition. \pb{So that was a cool point, but I dont know how/if we can test it statisticall? kinda a cool observation.} We speculate that a vast majority of the CentC’s exist as a result of very old duplications meaning that mutations have had a long time to accumulate, as only 3 instances of identical tandem copies exist. Roughly 80\% of the CentC repeats have their closest genetic relative on the same chromosome, on observation we would expect if CentC’s on a chromosome share ancestry.  However, only 14\% of closest genetic pairs are found within 10KB of each other, suggesting that their tandem duplication is old and that most CentC’s have persisted within the genome for a long time. \pb{This is an important sentence, and I can’t seem to get it to communicate my point properly.  perhaps because im making too many points}
+
+When studying CentC changes through domestication, our findings show that the repeat has experienced a decrease in copy number over time without a noticeable change in the structure of the repeat arrays. Using PacBio long read sequencing, we confirm genome-wide the observation we see on chromosomes 2 and 5, that most copies of CentC exist in large tandem arrays in all Zea taxa.  \jri{i think the discussion should largely mirror the results. this doesn’t go in the domestication part really.}  \pb{the pacbio is no where in the results, just methods.  Ok here in discussion?}From short read sequencing data, we show that modern maize has reduced genomic abundance of CentC when compared to the teosintes, a finding confirmed through FISH (Figure3).  Both teosintes within the species mays and its sister species luxurians have elevated levels of CentC.  Lower levels of centromere repeats in inbred maize contrasts previous studies that characterized the changing abundance of other common repeats.  For example, the abundance of most transposable element families increased after domestication \citep{Chia2012}.  Knowing that TE abundance increases in domesticated maize, we might have expected CentC content to increase as well if centromere size had to expand alongside most other repetitive content.  Alternatively, due to their structural role in kinetichore formation, we might have also expected centromere repeats to be largely excluded from the genome wide fluctuations in repetitive content assuming that selection exists to maintain centromere size.  Instead, the decrease in CentC content may indicate an active process of removing CentC.  We hypothesize that the removal of CentC content may correlate with genome size, as the sharp decrease in knob content through domestication actually led to an overall smaller genome size in inbred maize. The correlation between  functional  centromere size and genome size has been observed in grass species (Zhang and Dawe 2012). \jri{the problem here is kelly shows functional cent. size, not repeat array size.   } \pb{i dont think this changes the point... CentC, whether in or out the kinetichore, seems to maintain the same relatedness/diversity} Further investigation would be required to discover whether only those copies of CentC outside of the active kinetichore \jri{dude you spell kinetochore wrong throughout whole ms!} are being deleted.
+
+\pb{I dont like wrapping up with this... but it makes the most sense.  It also does have some cool findings grounded in other works.} We also identify the cent4 repeat as the LTR retrotransposon RLX\_sela.  Characterization of the TE consensus sequences shows that it contains a 232bp LTR on both ends but lacks any of the protein sequences for autonomous transposition, such as GAG and POL complexes.  Furthermore, RLX\_sela has [three] \jri{why brackets? is this uncerstain?} regions showing $>60$bp of homology to the 180bp knob repeat, one of which is approximately 200bp in length \jri{how does a 200bp piece show homology to a 180bp repeat? (I guess it could have indels or repeats) Is this is correct?}.  The lack of binding between CenH3 and RLX\_sela seen in the ChIP data further suggests that this repeat is likely pericentromeric rather and not involved in centromere function, a result echoed by  Jin et al (2004), who showed that Cent4 probes lagging behind CentC probes in cell division. \jri{great find. I didn’t know this part.} Previous work in rice \jri{Jimiung's paper is only rice correct?} has documented the frequent presence of nonautonomous LTR retrotransposons  in or near \jri{ correct to say this?} the centromere (Jiang et al 2002).  Given that the centromere on chromosome 4 shows signs of strong selection during domestication (Hufford et al. 2012) \jri{doublecheck i'm not misremembering this please}, it is plausible that the increase in abundance of Cent4 seen in domesticated maize is due to the effects of linked selection on a locus important for domestication rather than novel insertions or duplications. 
+
+In conclusion, our study pairs bioinformatics and cytology to validate observations of decreasing centromere repeat content through maize domestication.  We show that patterns of CentC similarity are consistent with tandem duplications and maize’s allopolyploid history has [left no significant differentiation between CentC’s from the different maize subgenomes]. We also identify the chromosome 4 specific repeat, cent4, as the TE RLX\_sela and show that it has increased through domestication, unlike a majority of the other TEs \citep{Chia2012}.    
+
+
+\begin{acknowledgements}
+We wish to thank Pacific Biosciences for sequencing resources.  We thank Lauren Sagara, Gernot Presting,  NSF summer exchange program interns Cesar, Aurelio, and Siddharth Bhadra-Lobo for helpful discussion.
+
+\jri{needs last names}US–NSF grant IOS-0922703
+\end{acknowledgements}
+
+% BibTeX users please use one of
+\bibliographystyle{spbasic}      % basic style, author-year citations
+%\bibliographystyle{spmpsci}      % mathematics and physical sciences
+%\bibliographystyle{spphys}       % APS-like style for physics
+\bibliography{refcentc}   % name your BibTeX data base
+
+\newpage
+
+\section*{Supplemental Material}
+
+% For tables use
+\begin{table}[h!]
+\caption{PacBio Read Counts and Tandem CentC}
+\label{supp.pacbio}       % Give a unique label
+% For LaTeX tables use
+\begin{tabular}{llll}
+\hline\noalign{\smallskip}
+Maize Line & Reads over 600bp & Reads with $\geq 4$ CentC & \% Reads Showing Tandem CentC \\
+\noalign{\smallskip}\hline\noalign{\smallskip}				
+B73	& 237995	& 72	& 0.030252736	\\
+\emph{luxurians}		&156964	&	79	&	0.050330012	\\
+\emph{mexicana}	 	&141939 	&	150	&	0.1056792	\\
+\emph{parviglumis}	&227050	& 89		&	0.039198414	\\
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+
+\end{document}
+% end of file template.tex
+
