@@ -48,6 +48,7 @@ grestore
 \usepackage[utf8]{inputenc}
 \usepackage{longtable}
 \usepackage{graphicx}
+\usepackage{booktabs}
 \usepackage{hyperref}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{natbib}
@@ -161,7 +162,7 @@ We found a total of 12,162 CentC variants in the maize reference genome and  una
 
 We used long-read Pacific Biosciences sequencing to verify that most CentC is in tandem arrays. We sequenced whole genome ($\sim 0.1$X) libraries from 4 \emph{Zea} species.  In spite of the low coverage, we recovered reads containing CentC sequence from all four taxa (Table \ref{supp.pacbio}).  In one 6.7KB read from the maize reference line B73, for example, we identified approximately 40 independent CentC copies in tandem, and similar arrays were seen in all four \emph{Zea} species analyzed.  These results show that overall structure of the repeats has been maintained for the approximately 140,000 years since the \emph{luxurians}-\emph{mays} divergence \citep{Hanson1996,  Ross-Ibarra2009} and that a majority of CentC is found in tandem arrays (Table \ref{supp.pacbio}).
 
-We then identified how many large clusters of CentC were retained from each of the two parental genomes that comprise the extant maize genome, referred to here as subgenome 1 and subgenome 2 (Figure \ref{circos}).  Previous work identified the parental genome for individual chromosomal segments \citep{Schnable2011} and centromeres \citep{Wang2012}.  Because large clusters are less likely to be misassembled, we focused our analyses on the 52 clusters $>$10KB in length (Fig \ref{Supp_clusterhist}).  We assign clusters to a subgenome if they are flanked by two regions identified as originating from the same  subgenome.  Thirty-eight of these clusters could be assigned to subgenome 1 (out of 43 assignable). If we restrict the analysis to clusters  $>$20KB, 16 of 17 clusters were unambiguously assigned to subgenome 1.  Even correcting for the genome-wide overrepresentation of subgenome 1 (62.5\% of assigned base pairs), these results suggest a strong inequality in the origin of large CentC clusters (Fisher's exact test, $p<0.005$ for both 10KB and 20KB clusters). \jri{I thought that the 1 large cluster is on chr3 that gernot said is wrong -- if so, can't we claim 17/17 or at least 16/16 assignable?}
+We then identified how many large clusters of CentC were retained from each of the two parental genomes that comprise the extant maize genome, referred to here as subgenome 1 and subgenome 2 (Figure \ref{circos}).  Previous work identified the parental genome for individual chromosomal segments \citep{Schnable2011} and centromeres \citep{Wang2012}.  Because large clusters are less likely to be misassembled, we focused our analyses on the 52 clusters $>$10KB in length (Fig \ref{Supp_clusterhist}).  We assign clusters to a subgenome if they are flanked by two regions identified as originating from the same  subgenome.  Thirty-eight of these clusters could be assigned to subgenome 1 (out of 43 assignable). If we restrict the analysis to clusters  $>$20KB, all of the 16 unambiguously assignable clusters come from subgenome 1.  Even correcting for the genome-wide overrepresentation of subgenome 1 (62.5\% of assigned base pairs), these results suggest a strong inequality in the origin of large CentC clusters (Fisher's exact test, $p<0.005$ for both 10KB and 20KB clusters). 
 
 \begin{figure}
 % For two-column wide figures use
@@ -255,7 +256,7 @@ We wish to thank Pacific Biosciences for sequencing resources.  We thank Siddhar
 \beginsupplement
 \section*{Supplemental Material}
 
-\begin{figure}[h!]
+\begin{figure}[]
 % For two-column wide figures use
 % Use the relevant command to insert your figure file.
 \includegraphics[width=1\textwidth]{Supp_clusterhist}
@@ -264,7 +265,7 @@ We wish to thank Pacific Biosciences for sequencing resources.  We thank Siddhar
 \label{Supp_clusterhist}    
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[]
 % For two-column wide figures use
 % Use the relevant command to insert your figure file.
 \includegraphics[width=1\textwidth]{Suppl_ACT_Seln.jpeg}
@@ -273,7 +274,7 @@ We wish to thank Pacific Biosciences for sequencing resources.  We thank Siddhar
 \label{Supp_MPS}    
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[]
 % For two-column wide figures use
 % Use the relevant command to insert your figure file.
 \includegraphics[width=1\textwidth]{Suppl_Chr02_Rspagedi.jpeg}
@@ -281,7 +282,7 @@ We wish to thank Pacific Biosciences for sequencing resources.  We thank Siddhar
 \label{Supp_SpagediChr02}    
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[]
 % For two-column wide figures use
 % Use the relevant command to insert your figure file.
 \includegraphics[width=1\textwidth]{Suppl_Chr05_Rspagedi.jpeg}
@@ -289,7 +290,7 @@ We wish to thank Pacific Biosciences for sequencing resources.  We thank Siddhar
 \label{Supp_SpagediChr05}    
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[]
 % For two-column wide figures use
 % Use the relevant command to insert your figure file.
 \includegraphics[width=1\textwidth]{AccuracyTest_2graphs.jpeg}
@@ -297,7 +298,7 @@ We wish to thank Pacific Biosciences for sequencing resources.  We thank Siddhar
 \label{Supp_Accuracy}    
 \end{figure}
 
-\begin{table}[h!]
+\begin{table}[]
 \caption{CentC Occurence Count In Maize RefGenv2}
 \label{supp.occurence}       % Give a unique label
 % For LaTeX tables use
@@ -312,7 +313,7 @@ Occurrences &  Number of CentC's\\
 
 
 % For tables use
-\begin{table}[h!]
+\begin{table}[]
 \caption{PacBio Read Counts and Tandem CentC}
 \label{supp.pacbio}       % Give a unique label
 % For LaTeX tables use
@@ -329,7 +330,7 @@ B73	& 237995	& 30	& 0.030252736	\\
 \end{table}
 
 % For tables use
-\begin{table}[h!]
+\begin{table}[]
 \caption{ChIP Reads mapping to Unassembled from different Oat-Maize Addition (OMA) Lines}
 \label{supp.gaby}       % Give a unique label
 % For LaTeX tables use
@@ -347,8 +348,7 @@ JJ1CI (OMA 8.05) & 8 & 8.5\\
 \end{tabular}
 \end{table}
 
-
-\pagebreak
+\clearpage
  \begin{longtable}[c]{|c|c|c|c|c|c|c|c|c|c|c|}
  \caption{Heirarchical clustering group assignment for copies of CentC, sorted by chromosome.  The number of CentC's from each chromosome is represented in the table.\label{long}}\\ 
 \hline
@@ -358,21 +358,11 @@ Group & Chr01 & Chr02 & Chr03 & Chr04 & Chr05 & Chr06 & Chr07 & Chr08 & Chr09 & 
  \hline
  \endfirsthead
 
-\hline
-\multicolumn{1}{|c|}{Table \ref{long} Continued}\\
+\multicolumn{1}{c}{Table \ref{long} Continued}\\
 \hline
 Group & Chr01 & Chr02 & Chr03 & Chr04 & Chr05 & Chr06 & Chr07 & Chr08 & Chr09 & Chr10\\ 
 \hline
- \endhead %Jeff, I absolutely cannot get this stupid repeated header thing to work.  Any guesses as to why its not?  
-
- \hline
- \endhead
- 
- \hline
- \endfoot
- 
- \hline
- \endlastfoot
+\endhead 
  
 1 & 59 & 10 & 19 & 15 & 28 & 0 & 101 & 31 & 23 & 51\\
 2 & 98 & 0 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 0\\
@@ -413,8 +403,8 @@ Group & Chr01 & Chr02 & Chr03 & Chr04 & Chr05 & Chr06 & Chr07 & Chr08 & Chr09 & 
 37 & 0 & 0 & 0 & 0 & 0 & 0 & 25 & 0 & 0 & 0\\
 38 & 0 & 0 & 0 & 0 & 3 & 0 & 248 & 1 & 19 & 1\\
 39 & 0 & 0 & 0 & 0 & 0 & 0 & 60 & 80 & 0 & 0\\
-40 & 0 & 0 & 0 & 0 & 0 & 0 & 182 & 0 & 0 & 0\\
-41 & 0 & 0 & 0 & 0 & 0 & 0 & 90 & 0 & 0 & 0\\
+40 & 0 & 0 & 0 & 0 & 0 & 0 & 182 & 0 & 0 & 0\\ 
+41 & 0 & 0 & 0 & 0 & 0 & 0 & 90 & 0 & 0 & 0\\  \hline
 42 & 0 & 0 & 0 & 0 & 0 & 0 & 58 & 0 & 0 & 0\\
 43 & 0 & 0 & 0 & 0 & 0 & 0 & 87 & 0 & 0 & 0\\
 44 & 0 & 0 & 0 & 0 & 0 & 0 & 22 & 135 & 1 & 0\\
@@ -432,8 +422,8 @@ Group & Chr01 & Chr02 & Chr03 & Chr04 & Chr05 & Chr06 & Chr07 & Chr08 & Chr09 & 
 56 & 0 & 0 & 0 & 0 & 0 & 0 & 2 & 0 & 0 & 226\\
 57 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 66\\
 58 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 56\\
-
- \end{longtable}
+\bottomrule
+\end{longtable}
 
 
 
