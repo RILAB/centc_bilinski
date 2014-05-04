@@ -224,16 +224,19 @@ Shotgun sequence data from the maize HapMap v2 \citep{Chia2012}, reveals a signi
 %% STUFF JEFF MAY ADD TO DISCUSSION
 %Phylogenetic analysis of centromere repeats from a large number of eukaryotes found that repeat abundance evolves more rapidly than expected under a simple model of brownian motion \ref{Melters2012}. 
 
-\jri{check tense throughout. i think some is past and some is present} 
+\jri{check tense throughout. i think some is past and some is present. also fill in species names X and Y and add CITEs} 
 Our analysis of centromere repeat diversity across the maize genome identifies thousands of copies exhibiting tremendous diversity. 
-Nonetheless, while we can cluster the repeats into groups of related sequences, these groups seem to have little relation to current or ancient maize chromosomes (Figure \ref{pcoa}).  
-We see no evidence of chromosome specific repeats such as that seen in X and Y \citep{Kawabe2005, Pontes2004}, suggesting the presence of mechanisms homogenizing repeats across centromeres on different chromosomes. We further show that Cent4, while specific to chromosome 4, appears to be a poorly characterized tandem repeat or retroelement, but is not associated with the centromere.  
+But while we can cluster the repeats into groups of related sequences, these groups seem to have little relation to current or ancient maize chromosomes (Figure \ref{pcoa}).  
+We see no evidence of chromosome specific repeats such as that seen in X and Y \citep{Kawabe2005, Pontes2004}, suggesting the presence of a mechanisms that homogenizes repeats across centromeres on different chromosomes. 
+We further show that Cent4, once thought to be a chromosome-specific centromere repeat (CITE), appears to be a poorly characterized tandem repeat or nonautonomous retroelement, but is not associated with the centromere.  
+Inter-chromosomal transposition was postulated by \citet{Shi2010} as an explanation for marker genotypes showing evidence of recombination, and such transposition could also explain the similarity of repeats across all chromosomes. 
 
-Instead of chromosome-specific groups, we find that virtually all the large arrays of CentC in the maize  genome derive from the maize1 subgenome, which is known to have lower gene loss and higher average expression than the maize subgenome 2 \cite{Schnable2011}. \jri{is it maize1 or maize subgenome 1? you use both here} 
-One possible explanation for this clear bias is that differential expression between subgenomes affects centromere function.  
-Regulatory microRNA’s corresponding to centromeric repeats have been observed\citep{ReinhartBartel2002}, and perhaps the silenced centromere became more susceptible to deletion just like other parts of subgenome2.  
-We see no evidence of a more rapid decay of CentC sequences in subgenome2, but we likely have poor ability to detect deletion of entire tandem arrays.  
-An alternative explanation is may simply be that the subgenome1 parent had more or larger CentC arrays, leading to an unequal representation in the ancient polyploid ancestor of maize.
+Instead of chromosome-specific groups, we find that virtually all the large arrays of CentC in the maize  genome derive from one of the two ancestral genomes present in modern day \emph{Zea} (Figure \ref{circos}).  
+One possible explanation for this result is that centromere inactivation mirrors the differential expression seen between the subgenomes.  
+Centromere inactivation could then lead to differential loss of CentC clusters, such that large clusters remain only in the active centromeres.
+Large CentC clusters are clearly biased in favor of subgenome 1, which is known to have lower gene loss and higher average expression than maize subgenome 2 \cite{Schnable2011}. 
+Consistent with this idea, \citet{ReinhartBartel2002} find evidence of regulatory microRNA’s corresponding to centromeric repeats.   
+Of course, an alternative explanation is simply that the subgenome 1 parent had more or larger CentC arrays, leading to an initial unequal representation in the ancient polyploid ancestor of maize.
 
 %Therefore, it may be worthwhile to further investigate the potential correlation between centromere retention and gene expression as the phenomenon of higher expression of genes from one ancestor may be common across plants \citep{Cheng2012}.  There are several possible explanations for the differential contribution of subgenome 1 to the diversity of CentC in the extant maize  genome. Subgenome 2 may have had severely reduced quantities of CentC and therefore never contributed equally.  The CentC from subgenome 2 may have decayed rapidly and thus less of it remains.  Lastly, the CentC from subgenome 1 may have expanded in copy number since the allopolyploidy event.  Though we are unable to conclusively identify the reason, the lack of a large number of identical tandem duplicates  and lack of close proximity highest genetic relatedness pairs suggests that any large scale expansion of CentC has not been recent.  Also, CentC’s in subgenome 2 cluster do not appear to have accumulated excess mutation, suggesting that they are not decaying more rapidly than their subgenome 1 counterparts.  We therefore believe that it is most likely that the subgenomes had an unequal contribution of CentC at the formation of the allopolyploid, though more research about the ancient parents is required.  
 
@@ -242,11 +245,15 @@ An alternative explanation is may simply be that the subgenome1 parent had more 
 %Our study traces the changes in centromere repeat genetic relatedness across maize chromosomes to show how ancient tetraploidy and subsequent evolution has impacted centromeres.  Most interestingly, we show that 
 
 %!RELATEDNESS
-Our sequence comparison of CentCs also enabled us to explore the relationship between genetic and physical distance between repeats.  
-Using the well-assembled centromeres on chromosomes 2 and 5, we found spatial autocorrelation among repeats, and we observe genome-wide that many CentC’s within an array fall into the same genetic cluster.  
+Our sequence comparison of CentCs also enabled us to explore the relationship between genetic and physical distance among repeats.  
+Using the well-assembled centromeres on chromosomes 2 and 5, we found spatial autocorrelation of relatedness among repeats, and we observe genome-wide that many CentC’s within an array fall into the same genetic cluster.  
 These observations are consistent with the simple idea that most repeats arise due to tandem duplication, and long distance transposition of CentC, while necessary to homogenize repeats across chromosomes \citep{Shi2010}, is relatively uncommon.
 
-One unusual result from our sequence comparison was the finding that pairs of CentC on different chromosomes may be identical or nearly so.  Our simulations suggest that this is plausible due to homoplasmy alone under realistic assumptions about mutation rate and divergence time.  We speculate that the vast majority of the CentC’s exist as a result of old duplications and that mutations have had a long time to accumulate. Roughly 80\% of the CentC repeats have their closest genetic relative on the same chromosome, as expected under a model of tandem duplication.  However, only 14\% of closest genetic pairs are found within 10KB of each other, suggesting that their tandem duplication is old and that most CentC’s have persisted within the genome for a long time. 
+One unusual result from our sequence comparison was the finding that pairs of CentC on different chromosomes share very high sequence similarity.  
+Our simulations suggest that, under realistic assumptions about mutation rate and divergence time, such a pattern is possible due to homoplasious mutation alone.  
+Roughly 80\% of the CentC repeats have their closest genetic relative on the same chromosome, as expected under a model of tandem duplication, but only 14\% of closest genetic pairs are found within 10KB of each other.
+We speculate that the vast majority of  CentC’s in the genome are thus a result of relatively old tandem duplications, and that sufficient time has occurred since duplication for rearrangements and mutations to break up patterns of identical tandem repeats.
+ 
 
 
 %pairs investigating why a pair of chromosomes on two different chromosomes are each other closest genetic relative, we revealed that homoplasy in mutations is common across CentC variants.  We suggest that copies of CentC are sufficiently old within the genome that homoplasious mutations cause physically distant CentC’s to be highly genetically related.  Importantly, we also do not see PCoA group capturing full clusters across chromosomes in a way that would be consistent with retrotransposition. 
