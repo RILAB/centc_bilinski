@@ -89,7 +89,7 @@ grestore
 
 \titlerunning{Centromere repeats in the maize genome}        % if too long for running head
 
-\author{Paul Bilinski \and Kevin Distor \and Jose Gutierrez-Lopez \and Gabriela Mendoza Mendoza \and Jinghua Shi \and Kelly Dawe \and Jeffrey Ross-Ibarra}
+\author{Paul Bilinski \and Kevin Distor \and Jose Gutierrez-Lopez \and Gabriela Mendoza Mendoza \and Jinghua Shi \and R. Kelly Dawe \and Jeffrey Ross-Ibarra}
 
 %\authorrunning{Short form of author list} % if too long for running head
 
@@ -111,10 +111,6 @@ grestore
            Jinghua Shi : R. Kelly Dawe\at
            Department of Plant Biology, University of Georgia\\
 	  Athens, Georgia, 30602
-           \and
-           R. Kelly Dawe\at
-           Department of Genetics, University of Georgia\\
-           Athens, Georgia, 30602\\
 }
 
 \date{Received: date / Accepted: date}
@@ -176,7 +172,7 @@ We designed a simulation to estimate the accuracy of our measurements of CentC c
 
 In order to better understand patterns of diversity at CentC, we performed simulations to test the likelihood of homoplasious mutations (i.e. independent mutations occurring at the same position in two different CentC repeats). Our simulation (code available at: \url{https://github.com/paulbilinski/CentC_Analyses/tree/master/Diversity_sims}) assumed that CentC has been evolving for  1 million years since the divergence of maize and \emph{Tripsacum} \citep{Ross-Ibarra2009}, a closely related genus whose centromere repeat shares a large amount of homology \citep{Melters2012}.  We assumed a constant copy number, a mutation rate of $3 x 10^{-8}$ \citep{clark2005estimating}, and one generation per year.  
 \subsection*{PacBio Sequencing}	
-Library preparation and sequencing was performed according to the methods cited in \citep{Melters2012}.  Using those protocols, we sequenced one individual from \emph{mays}, \emph{mexicana}, \emph{parviglumis}, and \emph{Z. luxurians} with Pacific Biosciences (Pacific Biosciences, Menlo Park, CA) technology. Approximately 200Mbp of reads were produced from each cell, and reads with length greater than 600bp were retained for analysis of tandem CentC content using BLAST (Table \ref{supp.pacbio}).  CentC copies were considered tandem if the read had 4 CentC copies within 300bp of each other. \subsection*{FISH}Fluorescent in situ hybridization (FISH) was used to compare abundance of CentC repeats in chromosomes of a maize x \emph{parviglumis} F1 hybrid and a maize x \emph{Z. luxurians} F1 hybrid. \jri{Kellyto fill in}	
+Library preparation and sequencing was performed according to the methods cited in \citep{Melters2012}.  Using those protocols, we sequenced one individual from \emph{mays}, \emph{mexicana}, \emph{parviglumis}, and \emph{Z. luxurians} with Pacific Biosciences (Pacific Biosciences, Menlo Park, CA) technology. Approximately 200Mbp of reads were produced from each cell, and reads with length greater than 600bp were retained for analysis of tandem CentC content using BLAST (Table \ref{supp.pacbio}).  CentC copies were considered tandem if the read had 4 CentC copies within 300bp of each other. \subsection*{FISH}Fluorescent in situ hybridization (FISH) was carried out as described in \citet{kato2004paint} (\emph{Z. luxurians} hybrid) and \citet{Shi2010} (\emph{Z. parviglumis} hybrid). 
 
 \section*{Results}
 \label{results}
@@ -204,11 +200,11 @@ We then identified how many large clusters of CentC were retained from each of t
 % Use the relevant command to insert your figure file.
 %  \includegraphics[width=0.75\textwidth]{circos.png}
 \includegraphics{Fig1_circos}
-\caption{CentC repeat location in relation to the maize subgenomes.  The outer ring depicts chromosomal assignment to the two subgenomes, with higher confidence regions are colored with darker colors.  Breakpoints between the subgenomes remain uncolored to indicate uncertainty. The middle ring, shaded in blue, displays the locations of all CentCs across the genome.  The inner ring, shaded in yellow, displays the locations of all CentC clusters greater than 20KB in length}
+\caption{CentC repeat location in relation to the maize subgenomes.  The outer ring depicts chromosomal assignment to the two subgenomes, with higher confidence regions are colored with darker colors.  Green corresponds to subgenome 1, brown to subgenome 2.  Breakpoints between the subgenomes remain uncolored to indicate uncertainty. The middle ring, shaded in blue, displays the locations of all CentCs across the genome.  The inner ring, shaded in yellow, displays the locations of all CentC clusters greater than 20KB in length}
 \label{circos}    
 \end{figure}
 
-Previous studies have also described the Cent4 repeat, a tandem pericentromeric repeat that occurs only primarily \jri{correct? it does blast elsewhere?} on chromosome 4 \citep{Page2001}. 
+Previous studies have also described the Cent4 repeat, a tandem pericentromeric repeat that occurs primarily on chromosome 4 \citep{Page2001}. 
 Available evidence does not point to any centromere function for Cent4: CenH3 chromatin immunoprecipitation data \citep{Wolfgruber2009, jin2004maize} show no significant over-representation of Cent4 compared to five known non-centromeric TE’s, fiber FISH shows clear separation of Cent4 from centromeric repeats \citep{jin2004maize} and Cent4 probes lag behind CentC probes in cell division, suggesting that they are not found in the kinetichore \citep{Jiang2002, jin2004maize}. 
 BLAST analyses of Cent4 sequences from Genbank revealed high homology to the poorly characterized LTR retrotransposon RLX\_sela that was previously shown to be associated with heterochromatic  knobs \citep{Tenaillon2011, Chia2012}.  
 Cent4 lacks any of the protein sequences necessary for autonomous transposition, such as GAG and POL complexes.  
@@ -254,8 +250,19 @@ By stochastically applying mutations to an initially homogeneous group of repeat
 % For two-column wide figures use
 % Use the relevant command to insert your figure file.
 \centering
-\includegraphics[width=1\textwidth]{Figure4_noedge}
-\caption{(a) Mb of CentC in genomic libraries of maize and teosinte.  Box plots show data from \citet{Chia2012}.  Points show data for maize inbred B73 and the teosinte \emph{Z. luxurians} from \citet{Tenaillon2011}.  For comparison, the data point of maize inbred B73 in \citet{Chia2012} is shown with a tick mark on the box plot. (b) FISH images from an F1 hybrids between maize and the teosinte \emph{parviglumis}, and maize and the teosinte \emph{Z. luxurians}.  Upper row shows the karyotype for the teosinte and the lower row shows the maize karyotype.  Red=CentC, Green=CRM. 
+\includegraphics[width=1\textwidth]{Fig4_kelly2}
+\caption{(a) FISH analysis of a single individual heterozygous for B73 and \emph{Zea luxurians} (GRIN accession PI422162).
+Chromosomes, ordered from 1 (left) to 10 (right), were hybridized with the Birchler probe cocktail \citep{kato2004paint}. 
+Green shows CentC and a 4-12-1 subtelomere repeat, blue the 180bp knob repeat, red the abundant TAG microsatellite and another subtelomeric repeat, white the TR1 knob repeat, orange the Cent4 repeat, yellow the 5S rDNA repeat, and aqua shows the Nucleolus Organizer Region.
+The green signals at the primary constrictions (arrows) are CentC.
+Note that \emph{Z. luxurians} has far brighter CentC signals.
+This image was graciously provided by Patrice Albert.
+(b) FISH analysis of a single individual heterozygous for B73 and \emph{Z. parviglumis}(GRIN accession PI566687).
+Chromosomes were hybridized with the \citet{Shi2010} probe cocktail showing CentC in red and CRM2 in green. 
+Each separate probe is shown separately below the two-color image, highlighting that CentC is more abundant in \emph{Z. parviglumis} and CRM2 is more abundant in maize. 
+(c) Mb of CentC in genomic libraries of maize and teosinte. 
+Box plots show data from \citet{Chia2012}. 
+Points show data for maize inbred B73 and the teosinte \emph{Z. luxurians} from \citet{Tenaillon2011}. For comparison, the data point of maize inbred B73 in \citet{Chia2012} is shown with a tick mark on the box plot.
 }
 \label{abundance}    
 \end{figure}
@@ -318,8 +325,6 @@ A model correlating centromere size to total genome size would propose that the 
 While our current data are insufficient to evaluate this conclusion, future work investigating differences in CentC content among maize landraces that vary in genome size \citep{poggio1998} may provide an opportunity to further test our hypothesis.  
 
 In conclusion, our detailed study of centromere repeats in the maize genome has highlighted differential contribution of subgenome, spatial autocorrelation along a chromosomes, and changes in abundance over the short time scale of domestication.  Further work evaluating CentC evolution across multiple populations and multiple related species may shed additional light on the timing and causes of these changes.  
-
-\jri{quick scan of the references looks OK, but do double check format etc.}
 
 \begin{acknowledgements}
 We wish to thank Pacific Biosciences for sequencing resources.  We thank Patrice Albert and James Birchler for providing the high-quality FISH image of the \emph{Z. luxurians} X B73 hybrid.  We thank Siddharth Bhadra-Lobo, Vince Buffalo, Anne Lorant, Gernot Presting, Lauren Sagara, Michelle Stitzer, and National Science Foundation summer exchange program interns Cesar Alvarez Mejia, Aurelio Hernandez Bautista for advice and helpful discussion. This project was funded by National Science Foundation grant IOS-0922703.
