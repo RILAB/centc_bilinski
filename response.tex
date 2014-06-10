@@ -1,5 +1,7 @@
 \documentclass[]{article}
 \newcommand{\res}[1]{\noindent \textcolor{blue}{{#1}} \\}
+\newcommand{\jri}[1]{\textcolor{red}{{\bf #1}} }
+
 \usepackage{color}
 \usepackage{hyperref}
 \hypersetup{
@@ -22,13 +24,13 @@ We hope to address each of your comments in the following letter and revised pap
 
 \section*{Editor:}
 
-Personally I wonder whether genome size differences between maize landraces will correlate with differences in CentC content (p. 11), because it is known from old cytogenetic studies that that they may vary in their number of non-centromeric heterochromatic knobs. \\
+Personally I wonder whether genome size differences between maize landraces will correlate with differences in CentC content (p. 11), because it is known from old cytogenetic studies that they may vary in their number of non-centromeric heterochromatic knobs. \\
 
 \res{We agree with the editor that the correlation between CentC abundance and knob number or genome size is of great interest. 
  Our current panel of maize lines available from the hapmap project is limited in its number of knobs, as many are inbred lines with relatively uniform knob abundance.  
 However, we are investigating the correlation in another project using a broad panel of approximately 300 maize landraces across an altitudinal gradient.  
-Though preliminary and unpublished, we find that CentC exhibits an opposite trend to that observed in knobs; CentC increases when knob count and genome size decreases along an altitudinal gradient.  
-We are currently in the process of further investigating this question, and hope to save our findings for another publication.}
+Though preliminary, our as yet punpublished findings are that CentC exhibits an opposite trend to that observed in knobs; CentC increases when knob count and genome size decreases along an altitudinal gradient.  
+We are currently in the process of further investigating this question, and hope to save our findings for another publication.} \jri{is this still true? i can't remember where we left off in terms of B repeats and whether we were correcting for genome size appropriately}
 
 \section*{Reviewer 1:}
 
@@ -73,16 +75,17 @@ Our finding only requires that CentC copies not belong to the exact same cluster
 
 1) Authors thought tandem duplication is the most important mechanism for the evolution of the repeat. However, as authors pointed out, tandem duplication generates similar sequence in near-by copies. I think gene conversion and unequal crossing over should play important roles for repeat evolution (in some part). For example, in Arabidopsis species (eg, Kawabe and Charlesworth 2007 JME), chimeric or mosaic structure repeats were found which could be originated by gene conversion or unequal crossing over. I think it is necessary to discuss about gene conversion and unequal crossing over in this manuscript.\\
 
-\res{While gene conversion and unequal crossing over likely both play a large role CentC copy number change, our findings suggest that these events are likely ancient in the maize genome.  We do not find instances where entire clusters or segments of clusters are repeated, which we would observe if 2 clusters existed as a result of a gene conversion event.  Instead, we find many clusters with unique copies of CentC, suggesting that mutations have accumulated and made once identical clusters unique.}
+\res{We consider unequal crossing over as a mechanism of tandem duplication; this is now clarified in the text. Gene conversion likely serves to homogenize repeats across clusters and chromosomes, and may help explain why realted sequences are not always physically close.  Nonetheless, most of our clusters contain many unique CentC, suggesting either that gene conversion is infreqeunt or point mutations are common. We have added text to the discussion mentioning gene conversion} \jri{we need to clarify text here about "tandem duplication" and add something to the discussion along the lines of the above.  reviewer doesn't mean large-scale gene conversion (several kb) but instead small tracts the size of individual repeats.  likely happens, but as you pointed out likely not rampant.  don't think we can say ancient though.\\} 
 
 2) Although it is not the main part in this manuscript, I wonder which arrays of CentC had decreased (or disappeared) from domesticated maize genome. Because not all CentC arrays form kinetochores, there is different importance of arrays. If it is possible to distinguish kinetochore forming and other arrays, please show level of decrements between them.\\
 
-\res{Active kinetichores for each of the chromosomes are an ongoing project, with current boundaries published in Wolfgruber et al 2009.}
+\res{We are only able to analyze active/inactive kinetochores with much confidence in the fully sequenced centromeres 2 and 5.  Blah blah... } \jri{ we should be able to say something here about 2 and 5. if i recall we didn't see any real differences? if we can say something, we can add one line/phrase to the text, which will make reviewer \#2 extra happy.\\ } 
 
 3) Authors conclude importance of tandem duplication because of the close location of highest similarity pairs and homogenization within arrays. However authors pointed out some distances between closest repeat and suggest that tandem duplication could be RELATIVELY old event. It is possible to estimate divergence between such pairs to show rough estimate of divergence times.\\
 
-\res{The short nature of individual repeats provides for a small mutational target, causing estimates of age to have extremely high variance.  
-Furthermore, the high levels of accumulated mutation make it difficult to discern ancestry of CentC copies, making age estimation a task outside the scope of this study.}
+\res{The short nature of individual repeats provides for a small mutational target, causing standard estimates of age to have high variance.  
+Standard estimation of age also assumes fixation, while many CentC variants likely exist as copy number variants in the population. More sophisticated analysis (e.g. Thornton 2007 Genetics) require knowledge of the frequency of the copy number variant, which we do not have.
+Furthermore, we show in the text that homoplasious mutation is a problem, making it difficult to discern ancestry of CentC copies without error.  As such, we felt that age estimation would not be complicated and unlikely to be very accurate.}
 
 \subsection*{Minor Comments:}
 
@@ -93,7 +96,7 @@ Furthermore, the high levels of accumulated mutation make it difficult to discer
 
 \item I wonder why authors used Jukes-Cantor distance. I agree that the simplest method is sometimes the best, however mutation should not be uniform in centromeric repeat and cause wrong estimate values. 
 
-\res{We chose Jukes-Cantor distance as we have no better justification for using a more complex model.  }
+\res{We agree that mutation rates are unlikely to be uniform across the CentC repeat, but given the complexities of the alignment due to indels we felt using a simple method was the best approach. }
 
 \item page 4, materials and method simulation part, please show mutation rate per what. Per year or per generation? 
 
