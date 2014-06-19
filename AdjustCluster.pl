@@ -58,18 +58,23 @@ foreach my $ID (@distnext) {
 		$sumbp=0;
 		$pos++;
 	} elsif ($distnext[$pos] =~ m/NA/){ #NA is end of chr, add up current tally to subgenome
-		if ($subgenome[$pos] == 0) { #add bp to its total subgenome bp and its count to subgenome count
-					$bpsub0 = $bpsub0 + $sumbp;
-					$sub0++;
-				}
-				if ($subgenome[$pos] == 1) {
-					$bpsub1 = $bpsub1 + $sumbp;
-					$sub1++;
-				}
-				if ($subgenome[$pos] == 2) {
-					$bpsub2 = $bpsub2 + $sumbp;
-					$sub2++;
-				}
+		my $tempbp = $bpcentc[$pos];
+		$sumbp = $sumbp + $tempbp;  #add its value to the running total
+		if ($sumbp >= $clustsize) {
+			if ($subgenome[$pos] == 0) { #add bp to its total subgenome bp and its count to subgenome count
+				$bpsub0 = $bpsub0 + $sumbp;
+				$sub0++;
+			}
+			if ($subgenome[$pos] == 1) {
+				$bpsub1 = $bpsub1 + $sumbp;
+				$sub1++;
+			}
+			if ($subgenome[$pos] == 2) {
+				$bpsub2 = $bpsub2 + $sumbp;
+				$sub2++;
+				print "$cluster[$pos] added to subgenome 2 WITH NA\n";
+			}
+		}
 		$sumbp=0; #end of chromosome, reset total bp
 		$pos++; #move to next cluster
 	} else { 
@@ -88,12 +93,19 @@ foreach my $ID (@distnext) {
 				if ($subgenome[$pos] == 2) {
 					$bpsub2 = $bpsub2 + $sumbp;
 					$sub2++;
+					print "$cluster[$pos] added to subgenome 2\n";
 				}
-			$sumbp = 0; #reset sumbp so you can move to next cluster
+				$sumbp = 0; #reset sumbp so you can move to next cluster
 			}
+			$sumbp = 0; #reset sumbp so you can move to next cluster
 		}		
-		elsif($distnext[$pos] <= $distcut) { #if distance is less than our cutoff, its tandem, and total up
+		elsif($distnext[$pos] < $distcut) { #if distance is less than our cutoff, its tandem, and total up
+			if ($subgenome[$pos] != $subgenome[$pos-1]) {
+				$sumbp = 0;
+			} else {
 			$sumbp = $sumbp + $tempbp;
+			#print "$cluster[$pos]\n";
+			}
 		}
 		$pos++;
 	}
