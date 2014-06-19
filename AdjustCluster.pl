@@ -23,23 +23,19 @@ my @bpsub = (); # array for bp in each subgenome
 my $sumbp = 0;
 my $pos = 0;
 
-foreach my $i (1..$#distnext) {
-	#if the current cluster is far away from next one or on diff subgenome
-	if ( ($distnext[$i]=~m/NA/ ) || ($distnext[$i] >= $distcut) || ( $subgenome[$i] != $subgenome[$i-1]) ) { 		
-		#if the current total is bigger than our cluster size of interest
-		if ($sumbp >= $clustsize) { 
-			$bpsub[$subgenome[$i]]+=$sumbp;
+foreach my $i (1..$#distnext) { #walk through distance array, start from 1 not 0
+	$sumbp += $bpcentc[$i];
+	if ( ($distnext[$i]=~m/NA/ ) || ($distnext[$i] >= $distcut) || ( $subgenome[$i] != $subgenome[$i-1]) ) {  #lots of ors, needs to meet these criteria		
+		if ($sumbp >= $clustsize) { #is it bigger than current cluster size
+			$bpsub[$subgenome[$i]]+=$sumbp; #add to either 0 first or second part
 			$clustersub[$subgenome[$i]]++;
-			print "$cluster[$i] added to subgenome $subgenome[$i]\n";
+			#print "$cluster[$i]\t$sumbp\n"; # added to subgenome $subgenome[$i]\n";
 		}
-		$sumbp = $bpcentc[$i]; #reset sumbp so you can move to next cluster
+		$sumbp = 0; #reset sumbp so you can move to next cluster
 	}		
-	#if distance is less than our cutoff, its tandem, and total up
-	else { 
-		$sumbp += $bpcentc[$i];
-	}
 }
 
 for my $j (0..2){
-	print "$j\t$bpsub[$j]\t$clustersub[$j]\n";
+	print "$bpsub[$j]\t$clustersub[$j]\t";
 }
+print "\n";

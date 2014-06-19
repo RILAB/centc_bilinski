@@ -54,6 +54,7 @@ grestore
 \usepackage{natbib}
 \usepackage{lscape}
 \usepackage{float}
+\usepackage{rotating}
 
 
 
@@ -510,6 +511,37 @@ Group & Chr01 & Chr02 & Chr03 & Chr04 & Chr05 & Chr06 & Chr07 & Chr08 & Chr09 & 
 58 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 56\\
 \bottomrule
 \end{longtable}
+
+\clearpage
+\begin{table}[h!]
+\caption{Number of clusters in each subgenome under varying criteria for distances apart.  Minimum cluster size is 10,000bp, though trends remain the same under different mininum cluster sizes.}\label{supp.adjustclust} 
+% For LaTeX tables use
+\begin{tabular}{ccccccc}
+\hline\noalign{\smallskip}
+Distance (bp) &  Unassigned BP &  Clusters Unassigned &  Subgenome1 BP &  Clusters Subgenome1 & Subgenome2 BP &  Clusters Subgenome2 \\\noalign{\smallskip}\hline\noalign{\smallskip}				
+1000 & 96504 & 6 & 829419 & 39 & 92126 & 7\\
+2000 & 109482 & 7 & 925028 & 43 & 115538 & 7\\
+3000 & 128492 & 8 & 969892 & 44 & 117094 & 7\\
+4000 & 128492 & 8 & 994104 & 41 & 124020 & 7\\
+5000 & 128492 & 8 & 1026845 & 40 & 136025 & 6\\
+6000 & 134203 & 8 & 1054805 & 39 & 140679 & 6\\
+7000 & 134203 & 8 & 1069516 & 38 & 140679 & 6\\
+8000 & 134203 & 7 & 1139270 & 36 & 140679 & 4\\
+9000 & 142786 & 7 & 1162918 & 37 & 147864 & 4\\
+10000 & 142786 & 7 & 1179529 & 36 & 149125 & 4\\
+11000 & 144185 & 7 & 1198451 & 36 & 149125 & 4\\
+12000 & 144185 & 6 & 1203008 & 34 & 149125 & 4\\
+13000 & 145273 & 6 & 1210187 & 32 & 149125 & 4\\
+14000 & 145273 & 6 & 1210329 & 31 & 149125 & 4\\
+15000 & 145273 & 6 & 1215760 & 30 & 149125 & 4\\
+16000 & 145273 & 5 & 1224106 & 27 & 152385 & 4\\
+17000 & 145273 & 5 & 1224106 & 25 & 152385 & 4\\
+18000 & 146060 & 5 & 1224106 & 25 & 157135 & 4\\
+19000 & 152703 & 5 & 1229229 & 25 & 157135 & 4\\
+20000 & 163555 & 6 & 1234836 & 25 & 157135 & 3\\
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
 
 \end{document}
 
