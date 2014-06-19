@@ -1,124 +1,45 @@
 #!/usr/bin/perl
 #Script to read in data frame with subgenome and cluster size and combine based on criteria
-use strict; #use warnings;
+use strict; 
+use warnings;
 
 die "usage: AdjustCluster.pl <Dist Cutoff> <clust size>" unless @ARGV==2;
 
 my $distcut = $ARGV[0];
 my $clustsize = $ARGV[1];
 
-open(orig, "<ClusterNeighbors_forscript.csv");
+open(ORIG, "<ClusterNeighbors_forscript.csv");
 #open(out, ">out_$distcut.$clustsize");
 
-my @bpcentc;
-my @distnext;
-my @subgenome;
-my @cluster;
+my @file=<ORIG>;
+my @cluster = split(/,/, $file[0]);
+my @bpcentc = split(/,/, $file[5]);
+my @distnext = split(/,/, $file[6]);
+my @subgenome = split(/,/, $file[7]);
+close ORIG;
 
-while(<orig>){
-	if ($_ =~ m/Cluster/){
-		@cluster = split(/,/, $_);
-	}
-#	if ($_ =~ m/Chr/){
-#		my @chr = split(/,/, $_);
-#	}
-#	if ($_ =~ m/Start/){
-#		my @Start = split(/,/, $_);
-#	}
-#	if ($_ =~ m/Stop/){
-#		my @Stop = split(/,/, $_);
-#	}
-#	if ($_ =~ m/Average/){
-#		my @Average = split(/,/, $_);
-#	}
-	if ($_ =~ m/BPCentC/){
-		@bpcentc = split(/,/, $_);
-	}	
-	if ($_ =~ m/DistancetoNext/){
-		@distnext = split(/,/, $_);
-	}	
-	if ($_ =~ m/Subgenome/){
-		@subgenome = split(/,/, $_);
-	}	
-}
-
-my $sub0 = 0;
-my $sub1 = 0;
-my $sub2 = 0;
-my $bpsub0 = 0;
-my $bpsub1 = 0;
-my $bpsub2 = 0;
+my @clustersub = (); # array for clusters in each subgenome
+my @bpsub = (); # array for bp in each subgenome
 my $sumbp = 0;
 my $pos = 0;
-my $crap = 0;
 
-
-foreach my $ID (@distnext) {
-	if ($distnext[$pos] =~ m/Distance/){#skip first column
-		$sumbp=0;
-		$pos++;
-	} elsif ($distnext[$pos] =~ m/NA/){ #NA is end of chr, add up current tally to subgenome
-		my $tempbp = $bpcentc[$pos];
-		$sumbp = $sumbp + $tempbp;  #add its value to the running total
-		if ($sumbp >= $clustsize) {
-			if ($subgenome[$pos] == 0) { #add bp to its total subgenome bp and its count to subgenome count
-				$bpsub0 = $bpsub0 + $sumbp;
-				$sub0++;
-			}
-			if ($subgenome[$pos] == 1) {
-				$bpsub1 = $bpsub1 + $sumbp;
-				$sub1++;
-			}
-			if ($subgenome[$pos] == 2) {
-				$bpsub2 = $bpsub2 + $sumbp;
-				$sub2++;
-				print "$cluster[$pos] added to subgenome 2 WITH NA\n";
-			}
+foreach my $i (1..$#distnext) {
+	#if the current cluster is far away from next one or on diff subgenome
+	if ( ($distnext[$i]=~m/NA/ ) || ($distnext[$i] >= $distcut) || ( $subgenome[$i] != $subgenome[$i-1]) ) { 		
+		#if the current total is bigger than our cluster size of interest
+		if ($sumbp >= $clustsize) { 
+			$bpsub[$subgenome[$i]]+=$sumbp;
+			$clustersub[$subgenome[$i]]++;
+			print "$cluster[$i] added to subgenome $subgenome[$i]\n";
 		}
-		$sumbp=0; #end of chromosome, reset total bp
-		$pos++; #move to next cluster
-	} else { 
-		my $tempbp = $bpcentc[$pos]; #set tempbp to the current position bp
-		if ($distnext[$pos] >= $distcut) { #if the current cluster is far away from next one
-			$sumbp = $sumbp + $tempbp;  #add its value to the running total
-			if ($sumbp >= $clustsize) { #if the current total is bigger than our cluster size of interest
-				if ($subgenome[$pos] == 0) { #add bp to its total subgenome bp and its count to subgenome count
-					$bpsub0 = $bpsub0 + $sumbp;
-					$sub0++;
-				}
-				if ($subgenome[$pos] == 1) {
-					$bpsub1 = $bpsub1 + $sumbp;
-					$sub1++;
-				}
-				if ($subgenome[$pos] == 2) {
-					$bpsub2 = $bpsub2 + $sumbp;
-					$sub2++;
-					print "$cluster[$pos] added to subgenome 2\n";
-				}
-				$sumbp = 0; #reset sumbp so you can move to next cluster
-			}
-			$sumbp = 0; #reset sumbp so you can move to next cluster
-		}		
-		elsif($distnext[$pos] < $distcut) { #if distance is less than our cutoff, its tandem, and total up
-			if ($subgenome[$pos] != $subgenome[$pos-1]) {
-				$sumbp = 0;
-			} else {
-			$sumbp = $sumbp + $tempbp;
-			#print "$cluster[$pos]\n";
-			}
-		}
-		$pos++;
+		$sumbp = $bpcentc[$i]; #reset sumbp so you can move to next cluster
+	}		
+	#if distance is less than our cutoff, its tandem, and total up
+	else { 
+		$sumbp += $bpcentc[$i];
 	}
 }
 
-print "Sub0: $sub0  bp: $bpsub0\nSub1: $sub1  bp: $bpsub1\nSub2: $sub2  bp: $bpsub2\n";
-my $bptot = $bpsub0 + $bpsub1 + $bpsub2;
-print "Total bp: $bptot\n";
-
-#foreach (@cluster){
-#	print "$_\n";
-#}
-	
-	
-	
-			
+for my $j (0..2){
+	print "$j\t$bpsub[$j]\t$clustersub[$j]\n";
+}
