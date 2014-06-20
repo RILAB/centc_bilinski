@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 #Script to read in data frame with subgenome and cluster size and combine based on criteria
+#for i in {1..20}; do BP=$(( $i*1000 )); perl AdjustCluster.pl $BP 10000;  done
+#code to execute it for a lot of diff distances
 use strict; 
 use warnings;
 
