@@ -1,0 +1,67 @@
+Dear Dr Jeffrey Ross-Ibarra,
+
+We have now received the reviewers' comments on your manuscript, "Diversity and evolution of centromere repeats in the maize genome", which you submitted to Chromosoma.
+
+Based on the advice received, I have decided that your manuscript could be reconsidered for publication provided that you are prepared to incorporate the requested revisions. When preparing your revised manuscript, you are asked to carefully consider the reviewer comments which can be found below, and submit a list of responses to the comments.
+In particular, address the point of reviewer1 regarding the fidelity of physical mapping of large tandem repeat clusters. Furthermore, please explain what you consider the mechanism of 'local duplication' (reviewer 2). Personally I wonder whether genome size differences between maize landraces will correlate with differences in CentC content (p. 11), because it is known from old cytogenetic studies that that they may vary in their number of non-centromeric heterochromatic knobs. Please modify wording in the 1st paragraph of Discussion, because already others (see p. 6)have shown that 'Cent4... is not associated  with the centromere'.
+Correct 'hierarchical' in the legend of Fig.2 and Tab.S4; 'pipeleine' within legend S5; remove 'percent' behind 20% (4th line from below on p. 3);and insert an empty space in front of bp or Mb throughout the text. You are kindly requested to also check the website for possible reviewer attachment(s).
+
+In order to submit your revised manuscript, please access the following web site:
+
+http://chso.edmgr.com/
+
+Your username is:
+rossibarra
+Your password is:
+ross-ibarr8545
+
+We look forward to receiving your revised manuscript before 01 Sep 2014.
+
+With kind regards,
+Ingo Schubert
+Associate Editor
+
+COMMENTS FOR THE AUTHOR:
+
+
+
+
+
+Reviewer #1: The large-scale analysis of maize centromere repeats is of great potential interest, but the data appear to be overinterpreted in some parts to present conclusions that in my view are not warranted. Of particular note is the finding that "virtually all the large arrays of CentC in the maize genome derive from one of the two ancestral genomes present in modern day Zea".
+
+This is an interesting observation.  However, there are several potential pitfalls to this analysis that have not been addressed.  First, the authors state that "because large clusters are less likely to be misassembled, we focused our analyses on the 52 clusters >10KB in length."  In fact, large tandem repeat clusters are much more likely to be misassembled than shorter counterparts. The maize genome assembly was done with minimum coverage and targeted to genic regions, with gaps over repeats being ignored, meaning no attempt was made to "finish", i.e. close these gaps. This has led to a large number of incorrect "joins" involving repeats.  For the same reason perfect tandem repeats would have been collapsed into a single sequence in the final maize genome assembly.  Therefore, the large CentC repeats are almost certainly misassembled and, if correct, would represent not the largest arrays but rather the most degenerate arrays of CentC repeats.  Also, tandem repeats are
+often broken up by retrotransposon insertions, so that large uninterrupted CentC runs could be interpreted quite differently as "immune to retrotransposon insertion" (although this is certainly not what I suggest is going on).
+
+In the abstract, the authors are even bolder with the following statement: "Although the two ancestral subgenomes of maize have contributed nearly equal numbers of centromeres, our analysis shows that the vast majority of all CentC repeats derive from one of the parental genomes."
+
+Wild maize relatives (other subspecies) have the same five centromeres derived from each of the two maize ancestral sub genomes as the reference inbred genome, yet the authors themselves show by FISH that ALL centromeres of these wild species have similarly high amounts of CentC.  This conclusion, therefore, is not justified in my mind.  Also, I agree with the authors that "Centromere inactivation could then lead to differential loss of CentC clusters", but wouldn't the same centromeres be inactivated in the wild relative as in the maize inbred? In other words, the inactive centromeres have lost CentC long before the domesticated maize diverged from the wild ancestors.
+
+In sum, I find the observation of these larger CentC clusters originating from one ancestral genome extremely interesting, but am not sure it has been proven to be real (as opposed to an artifact of the genome assembly) or explained quite satisfactorily.
+
+I do agree with the author's finding that proximal CentC copies are more similar than distal ones, and that "The tandem nature of CentC suggests it increases in copy number through local duplications that produce initially identical copies." Similar conclusions were found by Ma and Jackson (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1361721/).
+
+However, the authors observe that pairs of  CentC on different chromosomes share very high sequence similarity.  This again is a very interesting observation if one could be sure that the physical map is correct, but at least the early versions of the B73 map were fraught with major errors (entire BAC contigs and their associated centromeres being anchored to the wrong chromosome - see Schnable genome paper).  How sure are the authors that the specific repeats they find on multiple chromosomes are truly present, as opposed to having been misassigned to the wrong chromosome? This point should probably be addressed in the manuscript.
+
+The confirmation via genome sequence analysis of the fact, suspected from FISH images, that wild teosintes contain proportionately higher amounts of CentC than domesticated maize, is quite useful.
+
+
+Reviewer #2: Comment on the manuscript "Diversity and evolution of centromere repeats in the maize genome" by Bilinski et al. submitted to Chromosoma.
+
+This manuscript reports the evolution of centromeric repeat sequence in maize. Authors analysed inter-repeat variations and found presence of similar sequences within arrays. Also the copy number dynamic of centromeric repeat was analysed to conclude decrease of CentC through domestication of maize from wild ancestor.
+
+The manuscript is well written and the analyses are reasonable. I think the results contribute understanding evolution of centromeric satellite sequences in plant species.
+Thus, I recommend acceptance of the manuscript, however several conclusions are highly speculative and should be re-considered.
+
+My main concerns are
+
+1) Authors thought tandem duplication is the most important mechanism for the evolution of the repeat. However, as authors pointed out, tandem duplication generates similar sequence in near-by copies. I think gene conversion and unequal crossing over should play important roles for repeat evolution (in some part). For example, in Arabidopsis species (eg, Kawabe and Charlesworth 2007 JME), chimeric or mosaic structure repeats were found which could be originated by gene conversion or unequal crossing over. I think it is necessary to discuss about gene conversion and unequal crossing over in this manuscript.
+2) Although it is not the main part in this manuscript, I wonder which arrays of CentC had decreased (or disappeared) from domesticated maize genome. Because not all CentC arrays form kinetochores, there is different importance of arrays. If it is possible to distinguish kinetochore forming and other arrays, please show level of decrements between them.
+3) Authors conclude importance of tandem duplication because of the close location of highest similarity pairs and homogenization within arrays. However authors pointed out some distances between closest repeat and suggest that tandem duplication could be RELATIVELY old event. It is possible to estimate divergence between such pairs to show rough estimate of divergence times.
+
+Bellows are more minor comments
+
+1) For the reference about chromosome specific repeat families, Hall SE et al. 2005 Genetics is more suitable than Pontes et al. 2004. Pontes et al. 2004 reported different centromere repeat from different species in allopolyploid species.
+2) I wonder why authors used Jukes-Cantor distance. I agree that the simplest method is sometimes the best, however mutation should not be uniform in centromeric repeat and cause wrong estimate values.
+3) page 4, materials and method simulation part, please show mutation rate per what. Per year or per generation?
+4) page 6, line 6 from bottom, a typo for kinetochore.
+5) fig3, there are lacks of labelling (a) and (b).
