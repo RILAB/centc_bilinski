@@ -28,21 +28,23 @@ Personally I wonder whether genome size differences between maize landraces will
 
 \res{We agree with the editor that the correlation between CentC abundance and knob number or genome size is of great interest. 
  Our current panel of maize lines available from the hapmap project is limited in its number of knobs, as many are inbred lines with relatively uniform knob abundance when compared to the variation seen in landraces, and therefore beleive it is not a suitable panel to investigate this question.
-(cut here if we don't want to go into it further, though I would think the editor would like this more in depth answer)
 However, we are investigating the correlation in another project using a broad panel of approximately 300 maize landraces across an altitudinal gradient.  
 Though preliminary, our as yet punpublished findings are that CentC exhibits an opposite trend to that observed in knobs; CentC increases when knob count and genome size decreases along an altitudinal gradient.  
-We are currently in the process of further investigating this question, and hope to save our findings for another publication.}
+We are currently in the process of further investigating this question, and hope to save these findings for another publication.}
 
 \section*{Reviewer 1:}
 
-Of particular note is the finding that "virtually all the large arrays of CentC in the maize genome derive from one of the two ancestral genomes present in modern day Zea”.  This is an interesting observation.  However, there are several potential pitfalls to this analysis that have not been addressed.  First, the authors state that "because large clusters are less likely to be misassembled, we focused our analyses on the 52 clusters $>$10KB in length."  In fact, large tandem repeat clusters are much more likely to be misassembled than shorter counterparts. Also, tandem repeats are often broken up by retrotransposon insertions, so that large uninterrupted CentC runs could be interpreted quite differently as "immune to retrotransposon insertion" (although this is certainly not what I suggest is going on). \\
+Of particular note is the finding that "virtually all the large arrays of CentC in the maize genome derive from one of the two ancestral genomes present in modern day Zea”.  This is an interesting observation.  However, there are several potential pitfalls to this analysis that have not been addressed.  First, the authors state that "because large clusters are less likely to be misassembled, we focused our analyses on the 52 clusters $>$10KB in length."  In fact, large tandem repeat clusters are much more likely to be misassembled than shorter counterparts.  \\
 
 \res{We agree with the reviewer that large clusters are more likely to experience misassembly within the clusters.  
-However, we had intended to refer to a lower likelihood of misassembly in the context of genomic location.  
+We had intended to refer to a lower likelihood of being in the wrong genomic location with regard to subgenome.  
 Though large clusters are more likely to be incorrect in terms of copy number count or exact sequence, large clusters are more likely to be properly located on the maize iMap (now cited in the manuscript), a resource utilized in genome assembly that blended the physical, genetic, and optical maps of the maize genome.  
-If the reviewer agrees with this perspective, we have altered the text in the manuscript to properly orient our point.
-The reviewers point addressing novel insertion breaking up large clusters is very insightful.
-To investigate this, we reanalyzed cluster size data allowing for variable distances between clusters to determine membership.
+We have altered the text in the manuscript to properly orient our point.}
+
+Also, tandem repeats are often broken up by retrotransposon insertions, so that large uninterrupted CentC runs could be interpreted quite differently as "immune to retrotransposon insertion" (although this is certainly not what I suggest is going on).
+
+\res{The reviewer's point addressing novel insertions breaking up large clusters is very insightful.
+To investigate this, we reanalyzed cluster size data allowing for variable distances between clusters and variable cluster size to determine membership.
 The results are included in a new supplementary, and its consequences to further analyses such as subgenome counts are discussed later in our response.}
 
 This has led to a large number of incorrect "joins" involving repeats.  
@@ -51,59 +53,52 @@ Therefore, the large CentC repeats are almost certainly misassembled and, if cor
 
 \res{The reviewer makes an excellent point that the most degenerate arrays are also the most likely to not be collapsed into single CentC repeats during automated assembly.
 Indeed, automated assembly may explain the apparent lack of identical tandem duplicates across the genome and, more importantly, directly impact our ability to determine copy number in extremely large clusters.  
-However, we would expect that any bias in assembly would impact clusters from the different subgenomes similarly and therefore should not impact our overall findings.  
-Only if the CentC copies originating in subgenome 2 regions have higher identity to one another than copies from subgenome 1 might we expect that the size of these particular arrays are being systematically underrepresented through automated assembly. 
-We find no reason that mutation would impact CentC arrays differently and therefore do not believe that our ability to judge array size in subgenome 1 compared to subgenome 2 should differ greatly.}
+However, we would expect that any bias in assembly would impact clusters from the different subgenomes similarly and therefore should not impact our overall findings regarding subgenome.  }
 
 \res{Furthermore, our ability to judge subgenome of origin is not likely to be impacted through assembly issues. In most cases, the origin of CentC clusters were determined with adjacent single copy markers specific to one of the subgenome as outlined in Schnable et al 2011.  The number of CentC's in the cluster would not change the origin call.}
 
-\res{Regarding diversity of CentC copies from chromosomes with automated assembly versus primer walking, we also do not see striking differences.  
-Centromeres 2 and 5, where sequencing of CentC repeats was performed with primer walking, show similar levels of diversity across CentC repeats compared to other chromosomes.  
+\res{Regarding diversity of CentC copies from chromosomes with automated assembly, we also do not see striking differences.  
+Centromeres 2 and 5 were carefully assembled BAC-by-BAC as part of the reference genome (see Wolfgruber et al. 2009).  CentC in these centromeres  show similar levels of diversity across CentC repeats compared to other chromosomes.  
 We believe that the relatively uniform level of diversity observed across CentC is likely due to mutation over long periods of time.  
-Though assembly errors likely impact our ability to detect many of the tandem duplication instances of CentC in the maize genome, we believe that identical tandem duplicates account for a relatively small quantity of overall CentC copies as evidenced by primer walking on centromeres 2 and 5. }\jri{jri edits needed still}
+Though assembly errors likely impact our ability to detect many of the tandem duplication instances of CentC in the maize genome, we believe that identical tandem duplicates account for a relatively small quantity of overall CentC copies as evidenced by centromeres 2 and 5. }
 
 In the abstract, the authors are even bolder with the following statement: "Although the two ancestral subgenomes of maize have contributed nearly equal numbers of centromeres, our analysis shows that the vast majority of all CentC repeats derive from one of the parental genomes.”\\
 
-\res{As we explain above, we believe our ability to determine subgenome of origin is not comprised through assembly errors and any bias impacting copy number of CentC’s from each subgenome is likely alter both.  
-We therefore believe our finding of absolute counts of CentC in each subgenome is robust to sequences errors.  
-However, from these comments, we thought it prudent to investigate whether our finding of cluster bias in subgenome 1 that was based on a set maximum distance between clusters, held under varying maximum cluster distances.  
-Therefore, we wrote a script to reanalyze cluster and total bp membership in each subgenome dependent on incrementally increasing cluster sizes.
-Our findings show that cluster membership is also robust to varying tandem distance cut offs.
+\res{As we explain above, we believe our ability to determine subgenome of origin is not comprised through assembly errors, and our reanalysis considering clusters of varying size and distance supports our original idea.
 The signal is likely driven by the strong bias of CentC from subgenome, showing that regardless of our definition of tandem clusters, CentC membership is biased to subgenome 1.
-We have included a new supplementary table in the text to report these findings, and have altered the text to include the reanalysis.}\jri{jri edits needed still}
+We have included a new supplementary table in the text to report these findings, and have altered the text to include the reanalysis.}
 
 Wild maize relatives (other subspecies) have the same five centromeres derived from each of the two maize ancestral sub genomes as the reference inbred genome, yet the authors themselves show by FISH that ALL centromeres of these wild species have similarly high amounts of CentC.\\
 
 \res{We do acknowledge that FISH signal does indicate higher copy numbers of CentC in wild Zea across all chromosomes, but examination of the signals does not suggest uniformity across chromosomes.  
 For example, in figure 4B, the fluorescent signal on parviglumis chromosome 2 is much stronger than chromosome 3.  
 The centromeres on these chromosomes originate from different subgenomes.  
-Furthermore, we believe a qualitative measure such as fluorescence is not a good measure for precise CentC content.} \jri{jri edits needed still}
+Furthermore, we believe a qualitative measure such as fluorescence is not a good measure for precise CentC content and are hesitant to try to compare CentC content quantitatively using FISH alone. }
 
 I do agree with the author's finding that proximal CentC copies are more similar than distal ones, and that "The tandem nature of CentC suggests it increases in copy number through local duplications that produce initially identical copies." Similar conclusions were found by Ma and Jackson (\url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1361721/}).\\
 
-\res{We acknowledge the finding in rice, have incorporated the citation, and are glad that our finding in maize that uses a different method is consistent with standing hypotheses.}
+\res{We thank the reviewer for pointing out this paper to us and have incorporated the citation.  We're glad that our finding in maize that uses a different method is consistent with standing hypotheses.}
 
 However, the authors observe that pairs of  CentC on different chromosomes share very high sequence similarity.  This again is a very interesting observation if one could be sure that the physical map is correct, but at least the early versions of the B73 map were fraught with major errors (entire BAC contigs and their associated centromeres being anchored to the wrong chromosome - see Schnable genome paper).  How sure are the authors that the specific repeats they find on multiple chromosomes are truly present, as opposed to having been misassigned to the wrong chromosome? This point should probably be addressed in the manuscript.\\
 
-\res{We acknowledge that large assembly errors in regards to the exact location on a chromosome likely exist in the maize reference genome, but suspect our result is robust to these errors.
+\res{We acknowledge that large assembly errors in regards to the exact location on a chromosome likely exist in the maize reference genome (for example a cluster of CentC on the tip of the short arm of chromosome10 that belongs on chromosome 7), and have added text to this effect in the discussion.  
+Nonetheless, we suspect our result is robust to these errors.
 Our main finding is that CentCs can be most closely related to CentCs from different clusters.
 Because most clusters are on different BACs in the genome assembly, our result would still provide evidence of homoplasy even if BACs were improperly assigned to a chromosome. 
 While some of the highly-related pairs that we observe on different chromosomes may be due to assembly error (i.e. the BAC is placed on the wrong chromosome) we suspect it is unlikely that all such pairs can be explained by miss-assembly.  
-Furthermore, we investigated whether closest genetic distance pairs existed between chromosomes two and five.
-We find that several pairs exist, and have included text in the manuscript to reflect this more robust finding. (I have the sequence of these in a fasta, do I include as well?)
-It is also worth noting that centromeric BAC assemblies have improved since v1 of the reference genome, and LD-mapping with GBS data (unpublished) shows that while many BACs are in the wrong order, few of the BACs physically placed in a centromere are on the wrong chromosome. 
-We are aware, however, of CentC-containing BACs that are placed on the wrong chromosome, so the reviewer is correct that this may explain part of the result.  
-We have added text to this effect in the discussion.}
+Furthermore, looking only at the fully sequenced centromeres 2 and 5, we find several pairs of CentC on different chromosomes that are reciprocally closest genetically compared to all other CentC in the genome.  
+We have included text in the manuscript to reflect this more robust finding. 
+It is also worth noting that centromeric BAC assemblies have improved since v1 of the reference genome, and LD-mapping with GBS data (unpublished) shows that while many BACs are in the wrong order, few of the BACs physically placed in a centromeres are on the wrong chromosome. }
 
 \section*{Reviewer 2:}
 
 1) Authors thought tandem duplication is the most important mechanism for the evolution of the repeat. However, as authors pointed out, tandem duplication generates similar sequence in near-by copies. I think gene conversion and unequal crossing over should play important roles for repeat evolution (in some part). For example, in Arabidopsis species (eg, Kawabe and Charlesworth 2007 JME), chimeric or mosaic structure repeats were found which could be originated by gene conversion or unequal crossing over. I think it is necessary to discuss about gene conversion and unequal crossing over in this manuscript.\\
 
 \res{We consider unequal crossing over as a mechanism of tandem duplication; this is now clarified in the text.
-Gene conversion likely serves to homogenize repeats across clusters and chromosomes, and may help explain why realted sequences are not always physically close.
+Gene conversion likely serves to homogenize repeats across clusters and chromosomes, and may help explain why related sequences are not always physically close.
 Nonetheless, most of our clusters contain many unique CentC, suggesting either that gene conversion is infreqeunt or point mutations are common. 
 We have added text to the discussion mentioning gene conversion.} 
-\jri{we need to clarify text here about "tandem duplication" and add something to the discussion along the lines of the above.  reviewer doesn't mean large-scale gene conversion (several kb) but instead small tracts the size of individual repeats.  likely happens, but as you pointed out likely not rampant.  don't think we can say ancient though.\\} 
+
 
 2) Although it is not the main part in this manuscript, I wonder which arrays of CentC had decreased (or disappeared) from domesticated maize genome. Because not all CentC arrays form kinetochores, there is different importance of arrays. If it is possible to distinguish kinetochore forming and other arrays, please show level of decrements between them.\\
 
@@ -119,7 +114,7 @@ Unfortunately, it is not possible to determine whether active or inactive arrays
 Standard estimation of age also assumes fixation, while many CentC variants likely exist as copy number variants in the population. 
 More sophisticated analysis (e.g. Thornton 2007 Genetics) require knowledge of the frequency of the copy number variant, which we do not have.
 Furthermore, we show in the text that homoplasious mutation is a problem, making it difficult to discern ancestry of CentC copies without error.  
-As such, we felt that age estimation would not be complicated and unlikely to be very accurate.}
+As such, we felt that age estimation would be complicated and unlikely to be very accurate.}
 
 \subsection*{Minor Comments:}
 
