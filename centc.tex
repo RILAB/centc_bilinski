@@ -204,7 +204,7 @@ CentC copies were considered tandem if the read had 4 CentC copies each within 3
 
 We found a total of 12,162 CentC copies in the maize reference genome and unassembled BACs.  
 Of these, 8,259 were unique over their full length.
-While centromeres 2 and 5 are the only chromosomes with high confidence sequencing of CentC copies, the levels of diversity observed on these two chromosomes is comparable to the rest of the genome, suggesting that current assemblies of CentC sequence may estimate sequence variation with some accuracy.
+While centromeres 2 and 5 are the only chromosomes with high confidence sequencing of CentC copies, the levels of diversity observed on these two chromosomes is comparable to the rest of the genome (data not shown), suggesting that current assemblies of CentC sequence may estimate sequence variation with some accuracy.
 No CentC sequence occurred more than 10 times in the genome, and the vast majority ($>$75\%, Table \ref{supp.occurence}) of non-unique CentC variants occurred only twice.  
 Of the 2,266 non-unique CentC sequences, only 3 were tandem, identical duplicates.  
 %Excluding the 1,523 copies that occur on the unassembled BACs, 
@@ -230,7 +230,7 @@ Thirty-eight of these clusters could be assigned to subgenome 1 (out of 43 assig
 If we restrict the analysis to clusters  $>$20 Kb with clear assignment to one subgenome, all 16 clusters were found in subgenome 1 regions.  
 Even correcting for the genome-wide overrepresentation of subgenome 1 (64.7\% of assigned base pairs), these results suggest a strong inequality in the origin of large CentC clusters (Fisher's exact test, $p<0.005$ for both 10 Kb and 20 Kb clusters).
 One cluster $>$20 Kb falls within an unassigned region on chromosome 3.
-Our results are robust to varying definitions of clusters, as the bias is maintained when allowing for varying distances to define clusters \ref{supp.vartandem}.
+This difference between the subgenomes is robust to different criteria of cluster size and distance (Table \ref{tab:suppvartandem}).
 
 \begin{figure}
 % For two-column wide figures use
@@ -268,7 +268,6 @@ The tandem nature of CentC suggests it increases in copy number through local du
 Tandem duplications can occur through a variety of means, including slippage of the DNA polymerase \citep{jeeeeeeff.} or recombination that could lead to unequal crossing over or gene conversion \citep{edlund1981recombination}.
 Tandem duplication predicts that  clusters of CentC should be more closely related than CentC from different clusters.  
 Comparisons of genetic and physical distance among CentC repeats on chromosomes 2 and 5 shows that average genetic similarity is highest within clusters (Figure \ref{heatmap}), revealing significant spatial autocorrelation of CentC variants over distances up to 10-50 Kb (Figure \ref{Supp_SpagediChr02} and \ref{Supp_SpagediChr05}).
-Interestingly, we did not observe differences in genetic diversity when considering whether an array was found within or outside of the active kinetochore.
 
 \begin{figure}[h]
 \centering
@@ -282,7 +281,7 @@ Interestingly, we did not observe differences in genetic diversity when consider
 
 The decreased genetic distance among CentCs in local clusters on chromosome 2 and 5 suggest that many of the genetic groupings discovered in our genome-wide analysis should correspond to local clusters of repeats. 
 However, repeats within individual clusters are frequently found in different genetic groups as defined by principle coordinate analysis (Figure \ref{pcoa}).
-Several of these best pairs on different chromosomes are found between chromosomes 2 and 5, suggesting the phenomenon is not an artifact of errors in assembly.
+We observed multiple pairs of CentC which occur in the same genetic cluster in spite of being on separated on the completely sequenced centromeres 2 and 5, suggesting that our result is not simply an artifact of errors in assembly.
 A comparison of shared mutations across all pairs of CentC sequences reveals a potential explanation.  
 Of the $\sim 74$ million possible pairs,  approximately 6 million share $\geq 2$ mutations different from the genome-wide consensus, causing CentC copies to group with sequences that share mutations irrespective of their physical distance.  
 Comparing several triplets at random from our alignment confirms that two sequences in one PCoA assignment share greater pairwise identity than two sequences adjacent to one another in different PCoA groups.  
@@ -313,7 +312,7 @@ Points show data for maize inbred B73 and the teosinte \emph{Z. luxurians} from 
 \subsection*{Variation of CentC abundance in \emph{Zea}}
 
 Shotgun sequence data from the maize HapMap v2 \citep{Chia2012}, reveals a significantly greater abundance of CentC in teosinte than in domesticated maize (p$<0.01$; Figure \ref{abundance}).   
-Further support for differences between maize and its wild relatives comes from shotgun sequence data from \emph{Z. luxurians} \citep{Tenaillon2011}.  
+Further support for differences between maize and its wild relatives comes from additional  sequence  from \emph{Z. luxurians} \citep{Tenaillon2011}.  
 Analysis of these data find nearly twice as much CentC in \emph{Z. luxurians} as the maize inbred B73.  
 To corroborate these results, we performed fluorescent in-situ hybridization of F1 crosses between inbred maize and teosinte to determine if cytological observations agreed with our sequencing findings.   
 FISH data supports our observation that the teosintes \emph{parviglumis} and \emph{Z. luxurians} have more CentC than inbred maize (Figure \ref{abundance}).
@@ -329,16 +328,15 @@ Percentages of the libraries showing tandem repeats did not differ greatly acros
 Our analysis of centromere repeat diversity across the maize genome identifies thousands of copies exhibiting tremendous diversity. 
 But while we can cluster the repeats into groups of related sequences, these groups have little relation to current or ancient maize chromosomes (Figure \ref{pcoa}).
 We find no evidence of chromosome specific repeats as observed in \emph{Arabidopsis} species \citep{Kawabe2005, Pontes2004}, suggesting the presence of a mechanism that homogenizes repeats across centromeres on different chromosomes.
-%jeff, this needs to go here, but damnit its terrible.  i can't argue this well since i feel like its such a dumb point.
-Assembly errors, such as misplaced BACs known to occur in the maize genome or problems with assembling capturing biologically real CentC diversity, may also influence our ability to discover chromosomal patterns, and will only be improved over time with better sequencing technologies.
-We further verify that Cent4, once thought to be a chromosome-specific centromere repeat \citep{Page2001}, appears to be a poorly characterized tandem repeat or nonautonomous retroelement, but is not associated with the centromere, though it is present in much of modern maize and absent in the teosintes \citep{albert2010}.  
+Although we believe our results relatively robust to assembly errors, misplaced BACs and collapsed tandem copies almost certainly occur in the maize  reference genome and may influence our assessment of chromsome-wide patterns.
+We further verify that Cent4, once thought to be a chromosome-specific centromere repeat \citep{Page2001}, appears to be a poorly characterized tandem repeat or nonautonomous retroelement, but is not associated with the centromere, though it is present in much of modern maize and mostly absent in the teosintes \citep{albert2010}.  
 Inter-chromosomal transposition was postulated by \citet{Shi2010} as an explanation for marker genotypes showing evidence of recombination, and such transposition could also explain the similarity of repeats across all chromosomes. 
 
 Additionally, we find that virtually all the large arrays of CentC in the maize  genome derive from one of the two ancestral genomes present in modern day \emph{Zea} (Figure \ref{circos}).  
 One possible explanation for the biased inheritance pattern is that centromere inactivation mirrors the differential expression seen between the subgenomes.  
 Centromere inactivation could then lead to differential loss of CentC clusters, such that large clusters remain only in the active centromeres.
-%POTENTIAL INSERT: We do not observe differences in genetic distances between CentC clusters on chromosomes 2 and 5 that are inside or outside the active kinetochore, which may suggest that purges occur on a large scale versus sustained mutation over an extended time.
-Large CentC clusters are biased in favor of subgenome 1 \ref{supp.vartandem}, the subgenome known to have lower gene loss and higher average expression than maize subgenome 2 \citep{Schnable2011}. 
+We do not observe differences in genetic distances between CentC clusters on chromosomes 2 and 5 that are inside or outside the active kinetochore, which may suggest that purges occur on a large scale versus sustained mutation over an extended time.
+Large CentC clusters are biased in favor of subgenome 1 \ref{tab:suppvartandem}, the subgenome known to have lower gene loss and higher average expression than maize subgenome 2 \citep{Schnable2011}. 
 Consistent with a correlation between expression and CentC loss in subgenome 2, \citet{ReinhartBartel2002} found evidence of regulatory microRNA’s corresponding to centromeric repeats.
 An alternative explanation is that the subgenome 1 parent had more or larger CentC arrays, leading to an initial unequal representation in the ancient polyploid ancestor of maize.
 
@@ -356,7 +354,7 @@ Long distance transposition of CentC, while necessary to homogenize repeats acro
 One unusual result from our sequence comparison was the finding that pairs of CentC on different chromosomes share very high sequence similarity.  
 Our simulations suggest that, under realistic assumptions about mutation rate and divergence time, such a pattern is possible due to homoplasious mutation alone.  
 Roughly 80\% of the CentC repeats have their closest genetic relative on the same chromosome, as expected under a model of tandem duplication, but only 14\% of closest genetic pairs are found within 10 Kb of each other.
-Though assembly errors may explain a portion of these relationships, we find several closest distances pairs between chromosomes 2 and 5, suggesting our observation is biologically real.
+Though assembly errors may explain a portion of these relationships, we find several closest genetic pairs separated in the fully sequenced centromeres of chromosomes 2 and 5, suggesting our observation is biologically real.
 We speculate that the vast majority of  CentC’s in the genome are thus a result of relatively old tandem duplications, and that sufficient time has occurred since duplication for rearrangements and mutations to break up patterns of identical tandem repeats.
 
 %pairs investigating why a pair of chromosomes on two different chromosomes are each other closest genetic relative, we revealed that homoplasy in mutations is common across CentC variants.  We suggest that copies of CentC are sufficiently old within the genome that homoplasious mutations cause physically distant CentC’s to be highly genetically related.  Importantly, we also do not see PCoA group capturing full clusters across chromosomes in a way that would be consistent with retrotransposition. 
@@ -564,7 +562,6 @@ Group & Chr01 & Chr02 & Chr03 & Chr04 & Chr05 & Chr06 & Chr07 & Chr08 & Chr09 & 
 
 \clearpage
 \begin{table}[h!]
-\label{supp.vartandem} 
 \caption{Number of clusters in each subgenome under varying criteria for distances apart.  Minimum cluster size is 10,000 bp, though trends remain the same under different mininum cluster sizes.}\label{supp.adjustclust} 
 % For LaTeX tables use
 \begin{tabular}{ccccccc}
@@ -591,6 +588,7 @@ Distance ( bp) &  Unassigned  bp &  Clusters Unassigned &  Subgenome1  bp &  Clu
 19000 & 152703 & 5 & 1229229 & 25 & 157135 & 4\\
 20000 & 163555 & 6 & 1234836 & 25 & 157135 & 3\\
 \noalign{\smallskip}\hline
+\label{tab:suppvartandem} 
 \end{tabular}
 \end{table}
 
