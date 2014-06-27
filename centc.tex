@@ -214,7 +214,7 @@ In particular, chromosome 6 has many more reads aligning to the unassembled BACs
 Examining total repeat number, chromosome 7 had the most CentC, with 3,200 copies, while chromosome 6 had the fewest with 32 copies.
 
 We used long-read Pacific Biosciences sequencing to verify that most CentC is in tandem arrays. 
-We sequenced whole genome ($\sim 0.1$X) libraries from 4 \emph{Zea} species.  
+We sequenced whole genome ($\sim 0.1$X) libraries from 4 \emph{Zea} taxa.  
 In spite of the low coverage, we recovered reads containing CentC sequence from all four taxa (Table \ref{supp.pacbio}).  
 In one 6.7 Kb read from the maize reference line B73, for example, we identified approximately 40 independent CentC copies in tandem, and similar arrays were seen in all four \emph{Zea} species analyzed.  
 These results show that overall structure of the repeats has been maintained for the approximately 140,000 years since the \emph{luxurians}-\emph{mays} divergence \citep{Hanson1996,  Ross-Ibarra2009} and that a majority of CentC is found in tandem arrays (Table \ref{supp.pacbio}).
@@ -225,7 +225,7 @@ Due to the maize iMap resource \citep{zhou2009single}, large clusters are less l
 Therefore, we focused our analyses on the 52 clusters $>$10 Kb in length (Supplementary Fig \ref{Supp_clusterhist}).
 We assign clusters to a subgenome if they are flanked by two regions identified as originating from the same  subgenome.  
 Thirty-eight of these clusters could be assigned to subgenome 1 (out of 43 assignable).
-If we restrict the analysis to clusters  $>$20 Kb with clear assignment to one subgenome, all 16 clusters were found in subgenome 1 regions.  
+If we restrict the analysis to clusters  $>$20 Kb with clear assignment to one subgenome, all 16 clusters were found in subgenome 1.  
 Even correcting for the genome-wide overrepresentation of subgenome 1 (64.7\% of assigned base pairs), these results suggest a strong inequality in the origin of large CentC clusters (Fisher's exact test, $p<0.005$ for both 10 Kb and 20 Kb clusters).
 One cluster $>$20 Kb falls within an unassigned region on chromosome 3.
 This difference between the subgenomes is robust to different criteria of cluster size and distance (Table \ref{tab:suppvartandem}).
@@ -235,14 +235,13 @@ This difference between the subgenomes is robust to different criteria of cluste
 % Use the relevant command to insert your figure file.
 %  \includegraphics[width=0.75\textwidth]{circos.png}
 \includegraphics{Fig1_circos}
-\caption{CentC repeat location in relation to the maize subgenomes.  The outer ring depicts chromosomal assignment to the two subgenomes, with higher confidence regions are colored with darker colors.  Green corresponds to subgenome 1, brown to subgenome 2.  Breakpoints between the subgenomes remain uncolored to indicate uncertainty. The middle ring, shaded in blue, displays the locations of all CentCs across the genome.  The inner ring, shaded in yellow, displays the locations of all CentC clusters greater than 20 Kb in length}
+\caption{CentC repeat location in relation to the maize subgenomes.  The outer ring depicts chromosomal assignment to the two subgenomes, with higher confidence regions  in darker colors.  Green corresponds to subgenome 1, brown to subgenome 2.  Breakpoints between the subgenomes remain uncolored to indicate uncertainty. The middle ring, shaded in blue, displays the locations of all CentCs across the genome.  The inner ring, shaded in yellow, displays the locations of all CentC clusters greater than 20 Kb in length}
 \label{circos}    
 \end{figure}
 
 Previous studies have also described the Cent4 repeat, a tandem pericentromeric repeat that occurs primarily on chromosome 4 \citep{Page2001}. 
 Available evidence does not point to any centromere function for Cent4: CenH3 chromatin immunoprecipitation data \citep{Wolfgruber2009, jin2004maize} show no significant over-representation of Cent4 compared to five known non-centromeric TE’s, fiber FISH shows clear separation of Cent4 from centromeric repeats \citep{jin2004maize} and Cent4 probes lag behind CentC probes in cell division, suggesting that they are not found in the kinetochore \citep{Jiang2002, jin2004maize}. 
-BLAST analyses of Cent4 sequences from Genbank revealed high homology to the poorly characterized LTR retrotransposon RLX\_sela that was previously shown to be associated with heterochromatic  knobs \citep{Tenaillon2011, Chia2012}.  
-Cent4 lacks any of the protein sequences necessary for autonomous transposition, such as GAG and POL complexes.  
+BLAST analyses of Cent4 sequences from Genbank revealed high homology to the poorly characterized LTR retrotransposon RLX\_sela that was previously shown to be associated with heterochromatic  knobs \citep{Tenaillon2011, Chia2012}, but Cent4 lacks any of the protein sequences necessary for autonomous transposition, such as GAG and POL complexes.  
 But while previous work in rice has documented the presence of nonautonomous LTR retrotransposons  in or near the centromere \citep{Jiang2002}, RLX\_sela also appears to be missing the necessary primer binding sites that would distinguish it as a nonautonomous TE, suggesting that it may be a TE-derived tandem repeat unique to the pericentromere of chromosome 4. 
 
 \subsection*{Relatedness of CentC in the maize genome}
@@ -261,7 +260,7 @@ We found 58 significant clusters, but observed no pattern of groupings that reve
 }
 \label{pcoa}    
 \end{figure}
-
+%JRI STOPPED HERE
 The tandem nature of CentC suggests it increases in copy number through local duplications that produce initially identical copies.  
 Tandem duplications can occur through a variety of means, including slippage of the DNA polymerase \citep{jeeeeeeff.} or recombination that could lead to unequal crossing over or gene conversion \citep{edlund1981recombination}.
 Tandem duplication predicts that  clusters of CentC should be more closely related than CentC from different clusters.  
