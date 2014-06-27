@@ -260,9 +260,9 @@ We found 58 significant clusters, but observed no pattern of groupings that reve
 }
 \label{pcoa}    
 \end{figure}
-%JRI STOPPED HERE
+
 The tandem nature of CentC suggests it increases in copy number through local duplications that produce initially identical copies.  
-Tandem duplications can occur through a variety of means, including slippage of the DNA polymerase \citep{jeeeeeeff.} or recombination that could lead to unequal crossing over or gene conversion \citep{edlund1981recombination}.
+Tandem duplications can occur through a variety of means, including slippage of the DNA polymerase or recombination that could lead to unequal crossing over or gene conversion.
 Tandem duplication predicts that  clusters of CentC should be more closely related than CentC from different clusters.  
 Comparisons of genetic and physical distance among CentC repeats on chromosomes 2 and 5 shows that average genetic similarity is highest within clusters (Figure \ref{heatmap}), revealing significant spatial autocorrelation of CentC variants over distances up to 10-50 Kb (Figure \ref{Supp_SpagediChr02} and \ref{Supp_SpagediChr05}).
 
@@ -271,14 +271,14 @@ Comparisons of genetic and physical distance among CentC repeats on chromosomes 
 % For two-column wide figures use
 % Use the relevant command to insert your figure file.
 \includegraphics[width=1\textwidth]{Fig3_Heatmap}
-\caption{CentC physical location and genetic relatedness for (a) chromosome 2 and (b) chromosome 5.  On the physical map, red lines show locations of numbered CentC clusters and blue blocks show the location of the active kinetochores.  Scale bar is in MB.  Below each physical map is shown a heatmap of genetic relatedness of each CentC to (top row) other copies within its island of tandem repeats delineated by dotted lines and (bottom row) all other copies on the chromosome.  Darker colors indicate higher relatedness.  The total number of CentC in each cluster is shown below the map
+\caption{CentC physical location and genetic relatedness for (a) chromosome 2 and (b) chromosome 5.  On the physical map above, red lines show locations of numbered CentC clusters and blue blocks show the location of the active kinetochores.  Scale bar is in MB.  Below each physical map is shown a heatmap of genetic relatedness of each CentC to (top row) other copies within its island of tandem repeats delineated by dotted lines and (bottom row) all other copies on the chromosome.  Darker colors indicate higher relatedness.  The total number of CentC in each cluster is shown below the map
 }
 \label{heatmap}    
 \end{figure}
 
 The decreased genetic distance among CentCs in local clusters on chromosome 2 and 5 suggest that many of the genetic groupings discovered in our genome-wide analysis should correspond to local clusters of repeats. 
 However, repeats within individual clusters are frequently found in different genetic groups as defined by principle coordinate analysis (Figure \ref{pcoa}).
-We observed multiple pairs of CentC which occur in the same genetic cluster in spite of being on separated on the completely sequenced centromeres 2 and 5, suggesting that our result is not simply an artifact of errors in assembly.
+We observed multiple pairs of CentC which occur in the same genetic cluster in spite of being separated on the completely sequenced centromeres 2 and 5, suggesting that our result is not simply an artifact of errors in assembly.
 A comparison of shared mutations across all pairs of CentC sequences reveals a potential explanation.  
 Of the $\sim 74$ million possible pairs,  approximately 6 million share $\geq 2$ mutations different from the genome-wide consensus, causing CentC copies to group with sequences that share mutations irrespective of their physical distance.  
 Comparing several triplets at random from our alignment confirms that two sequences in one PCoA assignment share greater pairwise identity than two sequences adjacent to one another in different PCoA groups.  
@@ -291,7 +291,7 @@ By stochastically applying mutations to an initially homogeneous group of repeat
 \centering
 \includegraphics[width=1\textwidth]{Fig4_kelly2}
 \caption{(a) FISH analysis of a single individual heterozygous for B73 and \emph{Zea luxurians} (GRIN accession PI422162).
-Chromosomes, ordered from 1 (left) to 10 (right), were hybridized with the Birchler probe cocktail \citep{kato2004paint}. 
+Chromosomes, ordered from 1 (left) to 10 (right), were hybridized with the \citet{kato2004paint} probe cocktail. 
 Green shows CentC and a 4-12-1 subtelomere repeat, blue the 180 bp knob repeat, red the abundant TAG microsatellite and another subtelomeric repeat, white the TR1 knob repeat, orange the Cent4 repeat, yellow the 5S rDNA repeat, and aqua shows the Nucleolus Organizer Region.
 The green signals at the primary constrictions (arrows) are CentC.
 Note that \emph{Z. luxurians} has far brighter CentC signals.
@@ -314,28 +314,22 @@ Analysis of these data find nearly twice as much CentC in \emph{Z. luxurians} as
 To corroborate these results, we performed fluorescent in-situ hybridization of F1 crosses between inbred maize and teosinte to determine if cytological observations agreed with our sequencing findings.   
 FISH data supports our observation that the teosintes \emph{parviglumis} and \emph{Z. luxurians} have more CentC than inbred maize (Figure \ref{abundance}).
 Using whole genome shotgun PacBio long reads, we further investigated the overall structure of repeats across the different \emph{Zea} species.
-Percentages of the libraries showing tandem repeats did not differ greatly across the taxa (Figure \ref{supp.pacbio}).
+Percentages of the libraries showing tandem repeats were also higher in PacBio sequences from three teosinte compared to B73 (Table \ref{supp.pacbio}).
 
 \section*{Discussion}
 \label{discussion}
-
-%% STUFF JEFF MAY ADD TO DISCUSSION
-%Phylogenetic analysis of centromere repeats from a large number of eukaryotes found that repeat abundance evolves more rapidly than expected under a simple model of brownian motion \ref{Melters2012}. 
 
 Our analysis of centromere repeat diversity across the maize genome identifies thousands of copies exhibiting tremendous diversity. 
 But while we can cluster the repeats into groups of related sequences, these groups have little relation to current or ancient maize chromosomes (Figure \ref{pcoa}).
 We find no evidence of chromosome specific repeats as observed in \emph{Arabidopsis} species \citep{Kawabe2005, Pontes2004}, suggesting the presence of a mechanism that homogenizes repeats across centromeres on different chromosomes.
 Although we believe our results relatively robust to assembly errors, misplaced BACs and collapsed tandem copies almost certainly occur in the maize  reference genome and may influence our assessment of chromsome-wide patterns.
-We further verify that Cent4, once thought to be a chromosome-specific centromere repeat \citep{Page2001}, appears to be a poorly characterized tandem repeat or nonautonomous retroelement, but is not associated with the centromere, though it is present in much of modern maize and mostly absent in the teosintes \citep{albert2010}.  
-Inter-chromosomal transposition was postulated by \citet{Shi2010} as an explanation for marker genotypes showing evidence of recombination, and such transposition could also explain the similarity of repeats across all chromosomes. 
+We further verify that Cent4, once thought to be a chromosome-specific centromere repeat \citep{Page2001}, appears to be a poorly characterized tandem repeat or nonautonomous retroelement, but is not associated with the centromere.  
 
-Additionally, we find that virtually all the large arrays of CentC in the maize  genome derive from one of the two ancestral genomes present in modern day \emph{Zea} (Figure \ref{circos}).  
-One possible explanation for the biased inheritance pattern is that centromere inactivation mirrors the differential expression seen between the subgenomes.  
-Centromere inactivation could then lead to differential loss of CentC clusters, such that large clusters remain only in the active centromeres.
-We do not observe differences in genetic distances between CentC clusters on chromosomes 2 and 5 that are inside or outside the active kinetochore, which may suggest that purges occur on a large scale versus sustained mutation over an extended time.
-Large CentC clusters are biased in favor of subgenome 1 \ref{tab:suppvartandem}, the subgenome known to have lower gene loss and higher average expression than maize subgenome 2 \citep{Schnable2011}. 
-Consistent with a correlation between expression and CentC loss in subgenome 2, \citet{ReinhartBartel2002} found evidence of regulatory microRNA’s corresponding to centromeric repeats.
-An alternative explanation is that the subgenome 1 parent had more or larger CentC arrays, leading to an initial unequal representation in the ancient polyploid ancestor of maize.
+We find that virtually all the large arrays of CentC in the maize  genome derive from one of the two ancestral genomes present in modern day \emph{Zea} (Figure \ref{circos}, Table \ref{tab:suppvartandem}).  
+This biased ancestry mirrors differences in genic expression and deletion seen between the subgenomes  \citep{Schnable2011}. Higher deletion rates on subgenome 2 may explain our observation, but the finding of small regulatory RNA’s corresponding to centromeric repeats \citet{ReinhartBartel2002} in other taxa may suggest a more active mechanism behind the observed differences.  
+
+%% STUFF JEFF MAY ADD TO DISCUSSION
+%Phylogenetic analysis of centromere repeats from a large number of eukaryotes found that repeat abundance evolves more rapidly than expected under a simple model of brownian motion \ref{Melters2012}. 
 
 %Therefore, it may be worthwhile to further investigate the potential correlation between centromere retention and gene expression as the phenomenon of higher expression of genes from one ancestor may be common across plants \citep{Cheng2012}.  There are several possible explanations for the differential contribution of subgenome 1 to the diversity of CentC in the extant maize  genome. Subgenome 2 may have had severely reduced quantities of CentC and therefore never contributed equally.  The CentC from subgenome 2 may have decayed rapidly and thus less of it remains.  Lastly, the CentC from subgenome 1 may have expanded in copy number since the allopolyploidy event.  Though we are unable to conclusively identify the reason, the lack of a large number of identical tandem duplicates  and lack of close proximity highest genetic relatedness pairs suggests that any large scale expansion of CentC has not been recent.  Also, CentC’s in subgenome 2 cluster do not appear to have accumulated excess mutation, suggesting that they are not decaying more rapidly than their subgenome 1 counterparts.  We therefore believe that it is most likely that the subgenomes had an unequal contribution of CentC at the formation of the allopolyploid, though more research about the ancient parents is required.  
 
@@ -343,7 +337,7 @@ An alternative explanation is that the subgenome 1 parent had more or larger Cen
 
 %!RELATEDNESS
 Our sequence comparison of CentCs also enabled us to explore the relationship between genetic and physical distance among repeats.  
-Using the well-assembled centromeres on chromosomes 2 and 5, we found spatial autocorrelation of relatedness among repeats, and we observe genome-wide that many CentC’s within an array fall into the same genetic cluster.
+Using the well-assembled centromeres on chromosomes 2 and 5, we found spatial autocorrelation of relatedness among repeats, but also observed genome-wide that many CentC’s within an array fall into the same genetic cluster.
 We observed no differences in genetic similarity when comparing clusters inside against cluster outside the active kinetochore.
 Our observations are consistent with the simple idea that most repeats arise due to tandem duplication or related processes with similar outcomes such as small scale gene conversion or unequal crossing over.
 Long distance transposition of CentC, while necessary to homogenize repeats across chromosomes \citep{Shi2010}, appears relatively uncommon.
@@ -360,7 +354,7 @@ We speculate that the vast majority of  CentC’s in the genome are thus a resul
  % Given the lack of a genome wide pattern, we also wanted to investigate genetic relatedness on individual chromosomes.  We hypothesized that most copies of CentC arose from local duplication rather than transposition, and therefore the genetic distance between CentC’s would be lowest across CentC’s within a large tandem array.  \pb{This part is ugly, and needs help} From the reference genome, we chose to investigate chromosomes 2 and 5, since they have been sequenced from end to end, allowing for inferences about the relationship between diversity and physical proximity \citep{Wolfgruber2009}.  Furthermore, the role of the repeat arrays on chromosomes 2 and 5 appear very different, as the largest array on chromosome 2 interacts with the kinetochore, while no array on chromosome 5 does \citep{Wolfgruber2009}.  We find that repeats on chromosomes 2 and 5 are most highly genetically related to neighboring copies (Figure \ref{heatmap}).  This relationship was recapitulated in analyses using SpaGeDi, where CentC’s within approximately 10-50KB of one another were more genetically similar (Tables \ref{Supp_SpagediChr02} and \ref{Supp_SpagediChr05}).  Though we did not investigate the relationship between CentC location and genetic similarity on the other chromosomes due to incomplete sequencing of centromeres, we observe that many CentC’s within an array fall into the same  significant grouping in our Tracy-Widom clustering analysis, suggesting that high local similarity of CentC’s is a genome-wide phenomenon.  This local relatedness suggests that most CentC is evolving through tandem duplication and not a long distance mechanism such as transposition that had been previously suggested \citep{Shi2010}.  Concerning chromosomes 2 and 5, the higher local relatedness of all CentC clusters regardless of presence within the kinetochore suggests that CentC interaction with kinetochore proteins does not have a detectable change on their rates of evolution.
 
 
-Previous cytogenetic work  identified  differences in centromere repeat content  between domesticated maize and its wild relatives \emph{Z. mays} ssp. \emph{parviglumis}, \emph{Z. mays} ssp. \emph{mexicana}, and \emph{Z. luxurians} (hereafter \emph{parviglumis}, \emph{mexicana,} and \emph{luxurians}) \citep{Albert2010} but was unable to quantify  differences. 
+Previous cytogenetic work  identified  differences in centromere repeat content  between domesticated maize and its wild relatives \emph{Z. mays} ssp. \emph{parviglumis}, \emph{Z. mays} ssp. \emph{mexicana}, and \emph{Z. luxurians}  \citep{Albert2010} but was unable to quantify  differences. 
 Our resequencing results show that while there is little difference in the distribution of CentC in tandem arrays, the absolute abundance of CentC has  decreased during domestication, and we verify this with FISH in two maize-teosinte hybrid individuals (Figure \ref{abundance}). 
 %Decreasing CentC content during domestication contrasts with the apparent lack of change in transposable element abundance after controlling for genome size \citep{Chia2012}, suggesting that changes in CentC are not due to causes common to all repetitive sequence.
 Variability in observed abundance of transposable elements \citep{Chia2012} suggests that the decrease seen in CentC is not due to causes common to all repetitive sequences.
