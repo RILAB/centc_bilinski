@@ -34,18 +34,12 @@ We are currently in the process of further investigating this question, and hope
 
 \section*{Reviewer 1:}
 
-Of particular note is the finding that "virtually all the large arrays of CentC in the maize genome derive from one of the two ancestral genomes present in modern day Zea”.  This is an interesting observation.  However, there are several potential pitfalls to this analysis that have not been addressed.  First, the authors state that "because large clusters are less likely to be misassembled, we focused our analyses on the 52 clusters $>$10KB in length."  In fact, large tandem repeat clusters are much more likely to be misassembled than shorter counterparts.  \\
+Of particular note is the finding that "virtually all the large arrays of CentC in the maize genome derive from one of the two ancestral genomes present in modern day Zea”.  This is an interesting observation.  However, there are several potential pitfalls to this analysis that have not been addressed.  First, the authors state that "because large clusters are less likely to be misassembled, we focused our analyses on the 52 clusters $>$10KB in length."  In fact, large tandem repeat clusters are much more likely to be misassembled than shorter counterparts. The maize genome assembly was done with minimum coverage and targeted to genic regions, with gaps over repeats being ignored, meaning no attempt was made to "finish", i.e. close these gaps.  \\
 
 \res{We agree with the reviewer that large clusters are more likely to experience misassembly within the clusters.  
 We had intended to refer to a lower likelihood of being in the wrong genomic location with regard to subgenome.  
 Though large clusters are more likely to be incorrect in terms of copy number count or exact sequence, large clusters are more likely to be properly located on the maize iMap (now cited in the manuscript), a resource utilized in genome assembly that blended the physical, genetic, and optical maps of the maize genome.  
 We have altered the text in the manuscript to properly orient our point.}
-
-Also, tandem repeats are often broken up by retrotransposon insertions, so that large uninterrupted CentC runs could be interpreted quite differently as "immune to retrotransposon insertion" (although this is certainly not what I suggest is going on).
-
-\res{The reviewer's point addressing novel insertions breaking up large clusters is very insightful.
-To investigate this, we reanalyzed cluster size data allowing for variable distances between clusters and variable cluster size to determine membership.
-The results are included in a new supplementary, and its consequences to further analyses such as subgenome counts are discussed later in our response.}
 
 This has led to a large number of incorrect "joins" involving repeats.  
 For the same reason perfect tandem repeats would have been collapsed into a single sequence in the final maize genome assembly.  
@@ -62,18 +56,33 @@ Centromeres 2 and 5 were carefully assembled BAC-by-BAC as part of the reference
 We believe that the relatively uniform level of diversity observed across CentC is likely due to mutation over long periods of time.  
 Though assembly errors likely impact our ability to detect many of the tandem duplication instances of CentC in the maize genome, we believe that identical tandem duplicates account for a relatively small quantity of overall CentC copies as evidenced by centromeres 2 and 5. }
 
+Also, tandem repeats are often broken up by retrotransposon insertions, so that large uninterrupted CentC runs could be interpreted quite differently as "immune to retrotransposon insertion" (although this is certainly not what I suggest is going on).\\
+
+\res{The reviewer's point addressing novel insertions breaking up large clusters is very insightful.
+To investigate this, we reanalyzed cluster size data allowing for variable distances between clusters and variable cluster size to determine membership.
+The results are included in a new supplementary figure, and its consequences to further analyses such as subgenome counts are discussed later in our response.}
+
 In the abstract, the authors are even bolder with the following statement: "Although the two ancestral subgenomes of maize have contributed nearly equal numbers of centromeres, our analysis shows that the vast majority of all CentC repeats derive from one of the parental genomes.”\\
 
 \res{As we explain above, we believe our ability to determine subgenome of origin is not comprised through assembly errors, and our reanalysis considering clusters of varying size and distance supports our original idea.
 The signal is likely driven by the strong bias of CentC from subgenome, showing that regardless of our definition of tandem clusters, CentC membership is biased to subgenome 1.
 We have included a new supplementary table in the text to report these findings, and have altered the text to include the reanalysis.}
 
-Wild maize relatives (other subspecies) have the same five centromeres derived from each of the two maize ancestral sub genomes as the reference inbred genome, yet the authors themselves show by FISH that ALL centromeres of these wild species have similarly high amounts of CentC.\\
+Wild maize relatives (other subspecies) have the same five centromeres derived from each of the two maize ancestral sub genomes as the reference inbred genome, yet the authors themselves show by FISH that ALL centromeres of these wild species have similarly high amounts of CentC.   This conclusion, therefore, is not justified in my mind.  \\
 
 \res{We do acknowledge that FISH signal does indicate higher copy numbers of CentC in wild Zea across all chromosomes, but examination of the signals does not suggest uniformity across chromosomes.  
 For example, in figure 4B, the fluorescent signal on parviglumis chromosome 2 is much stronger than chromosome 3.  
 The centromeres on these chromosomes originate from different subgenomes.  
-Furthermore, we believe a qualitative measure such as fluorescence is not a good measure for precise CentC content and are hesitant to try to compare CentC content quantitatively using FISH alone. }
+We believe a qualitative measure such as fluorescence is not a good measure for precise CentC content and are hesitant to try to compare CentC content quantitatively using FISH alone.}
+
+Also, I agree with the authors that "Centromere inactivation could then lead to differential loss of CentC clusters", but wouldn't the same centromeres be inactivated in the wild relative as in the maize inbred? In other words, the inactive centromeres have lost CentC long before the domesticated maize diverged from the wild ancestors.  \\In sum, I find the observation of these larger CentC clusters originating from one ancestral genome extremely interesting, but am not sure it has been proven to be real (as opposed to an artifact of the genome assembly) or explained quite satisfactorily.\\
+
+\res{
+We have also modified the text regarding centromere inactivation.  
+Similar numbers of currently active centromeres come from subgenome 2 (4 centromeres) and subgenome 1 (6 centromeres).  
+Moreover, evidence from the fully sequenced centromere 5 suggests that large CentC arrays are often found outside of the active kinetochore.  
+The bias in CentC content is thus likely to be the result of subgenome-wide patterns of deletion rather than centromere inactivation.
+} %JEFFFF}
 
 I do agree with the author's finding that proximal CentC copies are more similar than distal ones, and that "The tandem nature of CentC suggests it increases in copy number through local duplications that produce initially identical copies." Similar conclusions were found by Ma and Jackson (\url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1361721/}).\\
 
@@ -98,7 +107,6 @@ It is also worth noting that centromeric BAC assemblies have improved since v1 o
 Gene conversion likely serves to homogenize repeats across clusters and chromosomes, and may help explain why related sequences are not always physically close.
 Nonetheless, most of our clusters contain many unique CentC, suggesting either that gene conversion is infreqeunt or point mutations are common. 
 We have added text to the discussion mentioning gene conversion.} 
-
 
 2) Although it is not the main part in this manuscript, I wonder which arrays of CentC had decreased (or disappeared) from domesticated maize genome. Because not all CentC arrays form kinetochores, there is different importance of arrays. If it is possible to distinguish kinetochore forming and other arrays, please show level of decrements between them.\\
 

@@ -126,8 +126,8 @@ Here, we use maize as a model to investigate how a complex history involving pol
 We first validate the existence of long tandem arrays of repeats in maize and other taxa in the genus \emph{Zea}.  
 Although we find considerable sequence diversity among CentC copies genome-wide, genetic similarity among repeats is highest within these arrays, suggesting that tandem duplications are the primary mechanism for the generation of new copies.  
 Nonetheless, clustering analyses identify similar sequences among distant repeats, and simulations suggest that this pattern may be due to homoplasious mutation.  
-Although the two ancestral subgenomes of maize have contributed nearly equal numbers of centromeres, our analysis shows that the  majority of all CentC repeats derive from one of the parental genomes.  
-Finally, by comparing maize with its wild progenitor teosinte, we find that the abundance of CentC  likely decreased after domestication, while the pericentromeric repeat Cent4 has drastically increased. 
+Although the two ancestral subgenomes of maize have contributed nearly equal numbers of centromeres, our analysis shows that the majority of all CentC repeats derive from one of the parental genomes.  
+Finally, by comparing maize with its wild progenitor teosinte, we find that the abundance of CentC likely decreased after domestication, while the pericentromeric repeat Cent4 has drastically increased. 
 
 \keywords{Centromere \and Evolution \and Subgenome}
 % \PACS{PACS code1 \and PACS code2 \and more}
@@ -182,7 +182,7 @@ Using the short read libraries from \citet{Tenaillon2011}, we selected parameter
 The final parameters for TEs were a hash size of 10, alignment candidate threshold of 11, 80\% homology excluding non-aligned portions of the read, and a 30\% minimum overlap.
 
 We designed a simulation to estimate the accuracy of our measurements of CentC content (code available at: \url{https://github.com/kddistor/dnasims}).  
-In short, our simulations altered the copy number of CentC repeats over a region of fixed length (10Mb), changing the percentage of the genome deriving from the repeat.  
+In short, our simulations altered the copy number of CentC repeats over a region of fixed length (10 Mb), changing the percentage of the genome deriving from the repeat.  
 Illumina reads were simulated from each of the DNA strings and mapped using our pipeline.  These simulations showed that our pipeline captured relative differences in abundance well, but underestimated total abundance of CentC.  
 We found that our pipeline could accurately capture differences of 0.05\% change in CentC abundance, suggesting that larger differences are likely to be biologically real (Figure \ref{Supp_Accuracy}).  
 \subsection*{Simulation of homoplasious mutations}
@@ -235,7 +235,7 @@ This difference between the subgenomes is robust to different criteria of cluste
 % Use the relevant command to insert your figure file.
 %  \includegraphics[width=0.75\textwidth]{circos.png}
 \includegraphics{Fig1_circos}
-\caption{CentC repeat location in relation to the maize subgenomes.  The outer ring depicts chromosomal assignment to the two subgenomes, with higher confidence regions  in darker colors.  Green corresponds to subgenome 1, brown to subgenome 2.  Breakpoints between the subgenomes remain uncolored to indicate uncertainty. The middle ring, shaded in blue, displays the locations of all CentCs across the genome.  The inner ring, shaded in yellow, displays the locations of all CentC clusters greater than 20 Kb in length}
+\caption{CentC repeat location in relation to the maize subgenomes.  The outer ring depicts chromosomal assignment to the two subgenomes, with higher confidence regions in darker colors.  Green corresponds to subgenome 1, brown to subgenome 2.  Breakpoints between the subgenomes remain uncolored to indicate uncertainty. The middle ring, shaded in blue, displays the locations of all CentCs across the genome.  The inner ring, shaded in yellow, displays the locations of all CentC clusters greater than 20 Kb in length}
 \label{circos}    
 \end{figure}
 
@@ -271,7 +271,7 @@ Comparisons of genetic and physical distance among CentC repeats on chromosomes 
 % For two-column wide figures use
 % Use the relevant command to insert your figure file.
 \includegraphics[width=1\textwidth]{Fig3_Heatmap}
-\caption{CentC physical location and genetic relatedness for (a) chromosome 2 and (b) chromosome 5.  On the physical map above, red lines show locations of numbered CentC clusters and blue blocks show the location of the active kinetochores.  Scale bar is in MB.  Below each physical map is shown a heatmap of genetic relatedness of each CentC to (top row) other copies within its island of tandem repeats delineated by dotted lines and (bottom row) all other copies on the chromosome.  Darker colors indicate higher relatedness.  The total number of CentC in each cluster is shown below the map
+\caption{CentC physical location and genetic relatedness for (a) chromosome 2 and (b) chromosome 5.  On the physical map above, red lines show locations of numbered CentC clusters and blue blocks show the location of the active kinetochores.  Scale bar is in Mb.  Below each physical map is shown a heatmap of genetic relatedness of each CentC to (top row) other copies within its island of tandem repeats delineated by dotted lines and (bottom row) all other copies on the chromosome.  Darker colors indicate higher relatedness.  The total number of CentC in each cluster is shown below the map
 }
 \label{heatmap}    
 \end{figure}
