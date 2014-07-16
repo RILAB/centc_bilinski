@@ -221,12 +221,12 @@ These results show that overall structure of the repeats has been maintained for
 
 We then identified how many large clusters of CentC were retained from each of the two parental genomes that comprise the extant maize genome, referred to here as subgenome 1 and subgenome 2 (Figure \ref{circos}).  
 Previous work identified the parental genome for individual chromosomal segments \citep{Schnable2011} and centromeres \citep{Wang2012}, with centromeres 1, 2, 5, 7, 9, and 10 deriving from subgenome 1 and 3, 4, 6, 8 from subgenome 2.  
-Due to the maize iMap resource \citep{zhou2009single}, we believe large clusters are less likely to be misplaced within the genome.
+Due to the maize iMap resource \citep{zhou2009single}, large clusters should be less likely to be misplaced within the genome.
 Therefore, we focused our analyses on the 52 clusters $>$10 Kb in length (Supplementary Fig \ref{Supp_clusterhist}).
 We assign clusters to a subgenome if they are flanked by two regions identified as originating from the same  subgenome.  
 Thirty-eight of these clusters could be assigned to subgenome 1 (out of 43 assignable).
 If we restrict the analysis to clusters  $>$20 Kb with clear assignment to one subgenome, all 16 clusters were found in subgenome 1.  
-Even correcting for the genome-wide overrepresentation of subgenome 1 (64.7\% of assigned base pairs), these results suggest a strong inequality in the origin of large CentC clusters (Fisher's exact test, $p<0.005$ for both 10 Kb and 20 Kb clusters).
+Even correcting for the genome-wide overrepresentation of subgenome 1 (64.7\% of assigned base pairs), these results suggest a strong inequality in the origin of large CentC clusters (Fisher's exact test, $p<0.005$ for total CentC, 10 Kb, and 20 Kb clusters).
 One cluster $>$20 Kb falls within an unassigned region on chromosome 3.
 This difference between the subgenomes is robust to different criteria of cluster size and distance (Table \ref{tab:suppvartandem}).
 
@@ -234,8 +234,8 @@ This difference between the subgenomes is robust to different criteria of cluste
 % For two-column wide figures use
 % Use the relevant command to insert your figure file.
 %  \includegraphics[width=0.75\textwidth]{circos.png}
-\includegraphics{Fig1_circos}
-\caption{CentC repeat location in relation to the maize subgenomes.  The outer ring depicts chromosomal assignment to the two subgenomes, with higher confidence regions in darker colors.  Green corresponds to subgenome 1, brown to subgenome 2.  Breakpoints between the subgenomes remain uncolored to indicate uncertainty. The middle ring, shaded in blue, displays the locations of all CentCs across the genome.  The inner ring, shaded in yellow, displays the locations of all CentC clusters greater than 20 Kb in length}
+\includegraphics[width=10cm,height=10cm,keepaspectratio]{Fig1_circosv3.png}
+\caption{CentC repeat location in relation to the maize subgenomes.  The outer ring depicts chromosomal assignment to the two subgenomes, with higher confidence regions in darker colors.  Green corresponds to subgenome 1, brown to subgenome 2.  Breakpoints between the subgenomes remain uncolored to indicate uncertainty. The middle ring, shaded in blue, displays the locations of all CentCs across the genome.  The inner ring, shaded in yellow, displays the locations of all CentC clusters greater than 20 Kb in length.  Asterisks indicate approximate location of the centromere}
 \label{circos}    
 \end{figure}
 
@@ -289,7 +289,7 @@ By stochastically applying mutations to an initially homogeneous group of repeat
 % For two-column wide figures use
 % Use the relevant command to insert your figure file.
 \centering
-\includegraphics[width=1\textwidth]{Fig4_kelly2}
+\includegraphics[width=15cm,height=15cm,keepaspectratio]{Fig4_kelly2}
 \caption{(a) FISH analysis of a single individual heterozygous for B73 and \emph{Zea luxurians} (GRIN accession PI422162).
 Chromosomes, ordered from 1 (left) to 10 (right), were hybridized with the \citet{kato2004paint} probe cocktail. 
 Green shows CentC and a 4-12-1 subtelomere repeat, blue the 180 bp knob repeat, red the abundant TAG microsatellite and another subtelomeric repeat, white the TR1 knob repeat, orange the Cent4 repeat, yellow the 5S rDNA repeat, and aqua shows the Nucleolus Organizer Region.
@@ -325,8 +325,9 @@ We find no evidence of chromosome specific repeats as observed in \emph{Arabidop
 Although we believe our results relatively robust to assembly errors, misplaced BACs and collapsed tandem copies almost certainly occur in the maize  reference genome and may influence our assessment of chromsome-wide patterns.
 We further verify that Cent4, once thought to be a chromosome-specific centromere repeat \citep{Page2001}, appears to be a poorly characterized tandem repeat or nonautonomous retroelement, but is not associated with the centromere.  
 
-We find that virtually all the large arrays of CentC in the maize  genome derive from one of the two ancestral genomes present in modern day \emph{Zea} (Figure \ref{circos}, Table \ref{tab:suppvartandem}).  
-This biased ancestry mirrors differences in genic expression and deletion seen between the subgenomes  \citep{Schnable2011}. Higher deletion rates on subgenome 2 may explain our observation, but the finding of small regulatory RNA’s corresponding to centromeric repeats \citet{ReinhartBartel2002} in other taxa may suggest a more active mechanism behind the observed differences.  
+We find that virtually all the large arrays of CentC in the maize reference genome derive from one of the two ancestral genomes present in modern day \emph{Zea} (Figure \ref{circos}, Table \ref{tab:suppvartandem}).  
+This biased ancestry mirrors differences in genic expression and deletion seen between the subgenomes  \citep{Schnable2011}. 
+Higher deletion rates on subgenome 2 may explain our observation, but the finding of small regulatory RNA’s corresponding to centromeric repeats \citet{ReinhartBartel2002} in other taxa may suggest a more active mechanism behind the observed differences.  
 
 %% STUFF JEFF MAY ADD TO DISCUSSION
 %Phylogenetic analysis of centromere repeats from a large number of eukaryotes found that repeat abundance evolves more rapidly than expected under a simple model of brownian motion \ref{Melters2012}. 
@@ -355,7 +356,7 @@ We speculate that the vast majority of  CentC’s in the genome are thus a resul
 
 
 Previous cytogenetic work  identified  differences in centromere repeat content  between domesticated maize and its wild relatives \emph{Z. mays} ssp. \emph{parviglumis}, \emph{Z. mays} ssp. \emph{mexicana}, and \emph{Z. luxurians}  \citep{Albert2010} but was unable to quantify  differences. 
-Our resequencing results show that while there is little difference in the distribution of CentC in tandem arrays, the absolute abundance of CentC has  decreased during domestication, and we verify this with FISH in two maize-teosinte hybrid individuals (Figure \ref{abundance}). 
+Our resequencing results show that while there is little difference in the distribution of CentC in tandem arrays, the absolute abundance of CentC has decreased during domestication, and we verify this with FISH in two maize-teosinte hybrid individuals (Figure \ref{abundance}). 
 %Decreasing CentC content during domestication contrasts with the apparent lack of change in transposable element abundance after controlling for genome size \citep{Chia2012}, suggesting that changes in CentC are not due to causes common to all repetitive sequence.
 Variability in observed abundance of transposable elements \citep{Chia2012} suggests that the decrease seen in CentC is not due to causes common to all repetitive sequences.
 The maize genome is smaller than its teosinte counterpart, largely due to differences in the abundance of heterochromatic knobs \citep{poggio1998}.  
@@ -364,7 +365,7 @@ A model correlating centromere size to total genome size would propose that the 
 While our current data are insufficient to evaluate this conclusion, future work investigating differences in CentC content among maize landraces that vary in genome size \citep{poggio1998} may provide an opportunity to further test our hypothesis.  
 
 In conclusion, our detailed study of centromere repeats in the B73 maize genome has highlighted differential contribution of subgenome, spatial autocorrelation along a chromosomes, and changes in abundance over the short time scale of domestication.  
-Since maize lines show vast cytogentic variation, further work evaluating CentC evolution across multiple populations and multiple related species may shed additional light on the timing and causes of these changes.  
+Since maize lines show vast cytogentic variation, further work evaluating CentC evolution across multiple populations and multiple taxa may shed additional light on the timing and causes of these changes.  
 
 \begin{acknowledgements}
 We wish to thank Pacific Biosciences for sequencing resources.  We thank Patrice Albert and James Birchler for providing the high-quality FISH image of the \emph{Z. luxurians} X B73 hybrid.  We thank Siddharth Bhadra-Lobo, Vince Buffalo, Anne Lorant, Gernot Presting, Lauren Sagara, Michelle Stitzer, and National Science Foundation summer exchange program interns Cesar Alvarez Mejia, Aurelio Hernandez Bautista for advice and helpful discussion. This project was funded by National Science Foundation grant IOS-0922703.
